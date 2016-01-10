@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://adaptv.github.io/adapt-strap/ -->
+<html lang="en" ng-app="adaptv.adaptStrapDocs" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <meta charset="utf-8">
+    <title>adapt-strap lightweight UI Components/utilities based on AngularJs 1.2+ &amp; Bootstrap 3</title>
+    <meta name="description" content="adapt-strap lightweight UI Components/utilities based on AngularJs 1.2+ &amp; Bootstrap 3">
+    <link rel="icon" href="http://adap.tv/favicon.ico" type="image/png">
+
+    <!-- ===== viewport settings ===== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="BootstrapSandbox">
+
+    <!-- ===== Properties for Google+ snippets ===== -->
+    <meta property="og:title" content="adapt-strap">
+    <meta property="og:description" content="adapt-strap lightweight UI Components/utilities based on AngularJs 1.2+ &amp; Bootstrap 3">
+    <meta property="og:image" content="http://adaptv.github.io/adapt-strap/docs/images/adapt-strap.png">
+
+    <!-- ===== Vendor Style Scripts ===== -->
+    <link rel="stylesheet" href="./adapt-strap_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./adapt-strap_files/default.min.css">
+    <link rel="stylesheet" href="./adapt-strap_files/font-awesome.min.css">
+    <link rel="stylesheet" href="./adapt-strap_files/adapt-strap.css">
+
+    <!-- ===== Local Style Scripts ===== -->
+    <link rel="stylesheet" href="./adapt-strap_files/app.css">
+</head>
+<body ng-controller="layoutCtrl" data-spy="scroll" data-target="#mainNavbar" class="ng-scope">
+    <!-- ===== Layout ===== -->
+    <!-- ngInclude: undefined --><ng-include src="&#39;docs/layout/navbar.html&#39;" class="ng-scope"><div id="mainNavbar" class="navbar navbar-default navbar-fixed-top ng-scope" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-scrollspy">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://adaptv.github.io/adapt-strap/#">Adapt Strap</a>
+        </div>
+        <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
+            <ul class="nav navbar-nav">
+                <li class="">
+                    <a href="http://adaptv.github.io/adapt-strap/#gettingStarted" ng-click="scrollTo(&#39;gettingStarted&#39;, $event)">
+                        Getting Started
+                    </a>
+                </li>
+                <!-- ngRepeat: module in modules --><li ng-repeat="module in modules" class="ng-scope">
+                    <a href="http://adaptv.github.io/adapt-strap/#alerts" ng-click="scrollTo(module.moduleName, $event)" class="ng-binding">
+                        Global Alerts
+                    </a>
+                </li><!-- end ngRepeat: module in modules --><li ng-repeat="module in modules" class="ng-scope">
+                    <a href="http://adaptv.github.io/adapt-strap/#tablelite" ng-click="scrollTo(module.moduleName, $event)" class="ng-binding">
+                        Table Lite
+                    </a>
+                </li><!-- end ngRepeat: module in modules --><li ng-repeat="module in modules" class="ng-scope">
+                    <a href="http://adaptv.github.io/adapt-strap/#tableajax" ng-click="scrollTo(module.moduleName, $event)" class="ng-binding">
+                        Table AJAX
+                    </a>
+                </li><!-- end ngRepeat: module in modules --><li ng-repeat="module in modules" class="ng-scope">
+                    <a href="http://adaptv.github.io/adapt-strap/#treebrowser" ng-click="scrollTo(module.moduleName, $event)" class="ng-binding">
+                        Tree Browser
+                    </a>
+                </li><!-- end ngRepeat: module in modules --><li ng-repeat="module in modules" class="ng-scope">
+                    <a href="http://adaptv.github.io/adapt-strap/#draggable" ng-click="scrollTo(module.moduleName, $event)" class="ng-binding">
+                        Drag and drop
+                    </a>
+                </li><!-- end ngRepeat: module in modules --><li ng-repeat="module in modules" class="ng-scope">
+                    <a href="http://adaptv.github.io/adapt-strap/#infinitedropdown" ng-click="scrollTo(module.moduleName, $event)" class="ng-binding">
+                        Infinite Dropdowns
+                    </a>
+                </li><!-- end ngRepeat: module in modules --><li ng-repeat="module in modules" class="ng-scope">
+                    <a href="http://adaptv.github.io/adapt-strap/#loadingindicator" ng-click="scrollTo(module.moduleName, $event)" class="ng-binding">
+                        Loading Indicator
+                    </a>
+                </li><!-- end ngRepeat: module in modules -->
+            </ul>
+        </div>
+    </div>
+</div></ng-include>
+    <!-- ngInclude: undefined --><ng-include src="&#39;docs/layout/header.html&#39;" class="ng-scope"><header class="welcome-header ng-scope">
+    <div class="row">
+        <div class="col-md-7">
+            <h1>Adapt-Strap</h1>
+            <p class="lead">
+                Lightweight UI Components/utilities based on AngularJs 1.2+ &amp; Bootstrap 3
+            </p>
+            <p>
+                <iframe src="./adapt-strap_files/github-btn(1).html" allowtransparency="true" frameborder="0" scrolling="0" width="87" height="20"></iframe>
+                <iframe src="./adapt-strap_files/github-btn.html" allowtransparency="true" frameborder="0" scrolling="0" width="83" height="20"></iframe>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://adaptv.github.io/adapt-strap/" data-hashtags="adapt-strap">Tweet</a>
+                <script id="twitter-wjs" src="./adapt-strap_files/widgets.js"></script><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </p>
+            <p>
+                Author<br>
+                <iframe src="./adapt-strap_files/github-btn(2).html" allowtransparency="true" frameborder="0" scrolling="0" width="140" height="20"></iframe>
+                <a href="https://twitter.com/kashjs" class="twitter-follow-button" data-show-count="false">Follow @kashjs</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </p>
+        </div>
+        <div class="col-md-5">
+            <div>
+                <a ng-href="https://github.com/Adaptv/adapt-strap/archive/2.4.6.zip" class="btn btn-lg btn-outline-inverse" href="https://github.com/Adaptv/adapt-strap/archive/2.4.6.zip">
+                    <i class="glyphicon glyphicon-download-alt"></i>
+                    Download
+                </a>
+                <a href="https://github.com/Adaptv/adapt-strap" class="btn btn-lg btn-outline-inverse">
+                    Code on Github
+                </a>
+            </div>
+            <div>
+                <ad-version><p style="padding-left:10px; color: rgba(255,255,255,.5)" class="ng-binding"><img src="./adapt-strap_files/adapt-strap.svg"> | current v2.4.6</p><p style="padding-left:10px;"><a href="https://codeclimate.com/github/Adaptv/adapt-strap"><img src="./adapt-strap_files/coverage.svg"></a></p><p style="padding-left:10px;"><a href="https://codeclimate.com/github/Adaptv/adapt-strap"><img src="./adapt-strap_files/gpa.svg"></a></p></ad-version>
+            </div>
+        </div>
+    </div>
+</header></ng-include>
+    <!-- ngInclude: undefined --><ng-include src="&#39;docs/layout/gettingStarted.html&#39;" class="ng-scope"><div class="container-fluid module-section ng-scope" id="gettingStarted">
+    <div class="row">
+        <div class="col-md-8 col-sm-8">
+            <h3>Getting Started:</h3>
+            <h4 class="text-muted">Install adapt-strap</h4>
+            <ol>
+                <li>
+                    Install the library using following command in your terminal:
+<markdown>
+    bower install adapt-strap --save
+</markdown>
+                </li>
+                <li>
+                    Include the library files in your index.html file:
+                    <markdown src="docs/layout/scripts.html"><pre><code class=" hljs xml"><span class="hljs-comment">&lt;!-- dependencies --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"bower_components/jquery/dist/jquery.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"bower_components/angular/angular.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"bower_components/angular-sanitize/angular-sanitize.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"bower_components/bootstrap/js/bootstrap.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"bower_components/bootstrap/css/bootstrap.css"</span>/&gt;</span>
+
+<span class="hljs-comment">&lt;!-- adapt-strap --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"bower_components/adapt-strap/dist/adapt-strap.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"bower_components/adapt-strap/dist/adapt-strap.tpl.min.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"bower_components/adapt-strap/dist/adapt-strap.min.css"</span>/&gt;</span>
+</code></pre></markdown>
+                </li>
+                <li>
+                    Add adaptv.adaptStrap and ngSenitize modules as a dependency to you main app module:
+<markdown>
+    angular.module('myApp', [
+        'ngSanitize', // adapt-strap requires ngSanitize
+        'adaptv.adaptStrap'
+    ]);
+</markdown>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-6">
+            <h4 class="text-muted">Configure Pagination</h4>
+            <markdown src="docs/components/pagination.html"><pre><code class=" hljs php"><span class="hljs-comment"># ==== Important === adapt-strap needs to know how your backend handles pagination ====:</span>
+<span class="hljs-comment">### Here is the default configuration for the pagination:</span>
+<span class="hljs-variable">$adConfigProvider</span>.paging = {
+    request: {
+        start: <span class="hljs-string">'skip'</span>,
+        pageSize: <span class="hljs-string">'limit'</span>,
+        page: <span class="hljs-string">'page'</span>,
+        sortField: <span class="hljs-string">'sort'</span>,
+        sortDirection: <span class="hljs-string">'sort_dir'</span>,
+        sortAscValue: <span class="hljs-string">'asc'</span>,
+        sortDescValue: <span class="hljs-string">'desc'</span>
+    },
+    response: {
+        itemsLocation: <span class="hljs-string">'data'</span>,
+        totalItems: <span class="hljs-string">'pagination.totalCount'</span>
+    },
+    pageSize: <span class="hljs-number">10</span>,
+    pageSizes: [<span class="hljs-number">10</span>, <span class="hljs-number">25</span>, <span class="hljs-number">50</span>]
+};
+
+<span class="hljs-comment">### You can globally configure the pagination configuration like this during the app initialization:</span>
+angular.module(<span class="hljs-string">'myApp'</span>).config([<span class="hljs-string">'$adConfigProvider'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(<span class="hljs-variable">$adConfigProvider</span>)</span> </span>{
+    <span class="hljs-variable">$adConfigProvider</span>.paging.response = {
+        totalItems: <span class="hljs-string">'results.opensearch:totalResults'</span>,
+        itemsLocation: <span class="hljs-string">'results.data'</span>
+    };
+}])
+
+<span class="hljs-comment">### You can override global configuration by providing the paginationConfig object under ajaxConfig object at component usage level</span>
+</code></pre></markdown>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <h4 class="text-muted">Configure Icons (optional)</h4>
+            <markdown src="docs/components/icons.html"><pre><code class=" hljs php"><span class="hljs-comment"># You can configure the default icons used in adapt-strap compnents:</span>
+<span class="hljs-comment">### Here is the default configuration for icons:</span>
+
+<span class="hljs-variable">$adConfigProvider</span>.iconClasses = {
+    expand: <span class="hljs-string">'glyphicon glyphicon-plus-sign'</span>,
+    collapse: <span class="hljs-string">'glyphicon glyphicon-minus-sign'</span>,
+    loadingSpinner: <span class="hljs-string">'glyphicon glyphicon-refresh ad-spin'</span>,
+    firstPage: <span class="hljs-string">'glyphicon glyphicon-fast-backward'</span>,
+    previousPage: <span class="hljs-string">'glyphicon glyphicon-backward'</span>,
+    nextPage: <span class="hljs-string">'glyphicon glyphicon-forward'</span>,
+    lastPage: <span class="hljs-string">'glyphicon glyphicon-fast-forward'</span>,
+    sortAscending: <span class="hljs-string">'glyphicon glyphicon-chevron-up'</span>,
+    sortDescending: <span class="hljs-string">'glyphicon glyphicon-chevron-down'</span>,
+    sortable: <span class="hljs-string">'glyphicon glyphicon-resize-vertical'</span>,
+    draggable: <span class="hljs-string">'glyphicon glyphicon-align-justify'</span>,
+    selectedItem: <span class="hljs-string">'glyphicon glyphicon-ok'</span>,
+    alertInfoSign: <span class="hljs-string">'glyphicon glyphicon-info-sign'</span>,
+    alertSuccessSign: <span class="hljs-string">'glyphicon glyphicon-ok'</span>,
+    alertWarningSign: <span class="hljs-string">'glyphicon glyphicon-warning-sign'</span>,
+    alertDangerSign: <span class="hljs-string">'glyphicon glyphicon-exclamation-sign'</span>
+}
+
+<span class="hljs-variable">$adConfigProvider</span>.componentClasses = {
+    tableLiteClass: <span class="hljs-string">'table'</span>,
+    tableAjaxClass: <span class="hljs-string">'table'</span>
+}
+
+<span class="hljs-comment">### You can globally configure the pagination configuration like this during the app initialization:</span>
+angular.module(<span class="hljs-string">'myApp'</span>).config([<span class="hljs-string">'$adConfigProvider'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(<span class="hljs-variable">$adConfigProvider</span>)</span> </span>{
+    <span class="hljs-variable">$adConfigProvider</span>.iconClasses.collapse = <span class="hljs-string">'glyphicon glyphicon-minus'</span>;
+    <span class="hljs-variable">$adConfigProvider</span>.iconClasses.expand = <span class="hljs-string">'glyphicon glyphicon-plus'</span>;
+    <span class="hljs-variable">$adConfigProvider</span>.iconClasses.loadingSpinner = <span class="hljs-string">'glyphicon glyphicon-repeat ad-spin'</span>;
+    <span class="hljs-variable">$adConfigProvider</span>.iconClasses.firstPage = <span class="hljs-string">'glyphicon glyphicon-fast-backward'</span>;
+    <span class="hljs-variable">$adConfigProvider</span>.iconClasses.previousPage = <span class="hljs-string">'glyphicon glyphicon-backward'</span>;
+    <span class="hljs-variable">$adConfigProvider</span>.iconClasses.nextPage = <span class="hljs-string">'glyphicon glyphicon-forward'</span>;
+    <span class="hljs-variable">$adConfigProvider</span>.iconClasses.lastPage = <span class="hljs-string">'glyphicon glyphicon-fast-forward'</span>;
+    <span class="hljs-variable">$adConfigProvider</span>.iconClasses.sortAscending = <span class="hljs-string">'glyphicon glyphicon-chevron-up'</span>;
+    <span class="hljs-variable">$adConfigProvider</span>.iconClasses.sortDescending = <span class="hljs-string">'glyphicon glyphicon-chevron-down'</span>;
+    <span class="hljs-variable">$adConfigProvider</span>.iconClasses.sortable = <span class="hljs-string">'glyphicon glyphicon-resize-vertical'</span>;
+    <span class="hljs-variable">$adConfigProvider</span>.iconClasses.draggable = <span class="hljs-string">'glyphicon glyphicon-align-justify'</span>;
+    <span class="hljs-variable">$adConfigProvider</span>.iconClasses.selectedItem = <span class="hljs-string">'glyphicon glyphicon-ok'</span>;
+    <span class="hljs-variable">$adConfigProvider</span>.iconClasses.alertInfoSign = <span class="hljs-string">'glyphicon glyphicon-info-sign'</span>;
+    <span class="hljs-variable">$adConfigProvider</span>.iconClasses.alertSuccessSign = <span class="hljs-string">'glyphicon glyphicon-ok'</span>;
+    <span class="hljs-variable">$adConfigProvider</span>.iconClasses.alertWarningSign = <span class="hljs-string">'glyphicon glyphicon-warning-sign'</span>;
+    <span class="hljs-variable">$adConfigProvider</span>.iconClasses.alertDangerSign = <span class="hljs-string">'glyphicon glyphicon-exclamation-sign'</span>;
+
+    <span class="hljs-comment">// component classes</span>
+    <span class="hljs-variable">$adConfigProvider</span>.componentClasses.tableLiteClass = <span class="hljs-string">'table my-custom-class'</span>;
+}])
+
+<span class="hljs-comment">### You can override global configuration at the directive usage level too.</span>
+</code></pre></markdown>
+        </div>
+    </div>
+</div>
+</ng-include>
+    <!-- ngInclude: undefined --><ng-include src="&#39;docs/layout/modules.html&#39;" class="ng-scope"><div class="container-fluid ng-scope">
+    <!-- ngRepeat: module in modules --><div class="module-section ng-scope" ng-repeat="module in modules" id="alerts">
+        <h3 class="ng-binding">Global Alerts</h3>
+        <p class="text-muted ng-binding">- shows notification messages to the user.</p>
+        <div ng-controller="treebrowserCtrl" class="ng-scope">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <h4 class="text-danger">Code</h4>
+                    <code-navigator files="module.docFiles" base-path="src/alerts/docs/" class="ng-isolate-scope"><div class="code-navigator">
+    <div>
+        <ul class="nav nav-tabs" role="tablist">
+            <!-- ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope active">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">alerts.view.html</a>
+            </li><!-- end ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">alerts.ctrl.js</a>
+            </li><!-- end ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">style.css</a>
+            </li><!-- end ngRepeat: file in files -->
+        </ul>
+    </div>
+    <div>
+        <markdown src="src/alerts/docs/alerts.view.html"><pre><code class=" hljs xml">  <span class="hljs-comment">&lt;!-- Usage: put this in your main app container --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">ad-alerts</span> <span class="hljs-attribute">timeout</span>=<span class="hljs-value">"timeoutValue"</span> <span class="hljs-attribute">custom-classes</span>=<span class="hljs-value">"thick-border"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">ad-alerts</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"infoBut"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-info"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"showInfo();"</span>&gt;</span>
+    Show Info Message
+  <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-warning"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"showWarning();"</span>&gt;</span>
+    Show Warning Message
+  <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-success"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"showSuccess();"</span>&gt;</span>
+    Show Success Message
+  <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"btn btn-danger"</span> <span class="hljs-attribute">ng-click</span>=<span class="hljs-value">"showError();"</span>&gt;</span>
+    Show Error Message
+  <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+</code></pre></markdown>
+    </div>
+</div></code-navigator>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <h4 class="text-primary">
+                      Demo
+                      <!-- ngIf: module.playGroundUrl -->
+                    </h4>
+                    <!-- ngInclude: undefined --><ng-include src="&#39;src/&#39; + module.moduleName + &#39;/docs/&#39; + module.moduleName + &#39;.view.html&#39;" class="ng-scope"><h3 class="ng-scope">Click buttons to show the alert message.</h3>
+<div ng-controller="alertCtrl" class="ng-scope">
+  <!-- ad_example_start -->
+  <!-- Usage: put this in your main app container -->
+  <ad-alerts timeout="timeoutValue" custom-classes="thick-border" class="ng-isolate-scope"><div ng-show="settings.type !== &#39;&#39;" class="alert alert- alert-dismissible fade in thick-border ng-hide" role="alert"><button type="button" class="close" ng-click="close();" aria-label="Close"><span aria-hidden="true">×</span></button><h4 class="ng-binding"><span ng-class="iconMap[settings.type]"></span>&nbsp;&nbsp; <strong class="ng-binding"></strong> </h4></div></ad-alerts>
+  <!-- ad_example_end -->
+  <br>
+  <!-- ad_example_start -->
+  <button id="infoBut" class="btn btn-info" ng-click="showInfo();">
+    Show Info Message
+  </button>
+  <button class="btn btn-warning" ng-click="showWarning();">
+    Show Warning Message
+  </button>
+  <button class="btn btn-success" ng-click="showSuccess();">
+    Show Success Message
+  </button>
+  <button class="btn btn-danger" ng-click="showError();">
+    Show Error Message
+  </button>
+  <!-- ad_example_end -->
+</div>
+</ng-include>
+                </div>
+            </div>
+            <div>
+                <div>
+                  <span class="btn btn-link btn-lg" ng-click="module.showOptions = !module.showOptions">
+                    <i class="fa fa-plus" ng-hide="module.showOptions"></i>
+                    <i class="fa fa-minus ng-hide" ng-show="module.showOptions"></i>
+                    Options
+                  </span>
+                </div>
+                <!-- ngIf: module.showOptions -->
+            </div>
+            <div>
+              <div>
+                 <span class="btn btn-link btn-lg" ng-click="module.showMoreInfo = !module.showMoreInfo">
+                   <i class="fa fa-plus" ng-hide="module.showMoreInfo"></i>
+                   <i class="fa fa-minus ng-hide" ng-show="module.showMoreInfo"></i>
+                   More Info
+                 </span>
+              </div>
+              <!-- ngIf: module.showMoreInfo -->
+            </div>
+        </div>
+    </div><!-- end ngRepeat: module in modules --><div class="module-section ng-scope" ng-repeat="module in modules" id="tablelite">
+        <h3 class="ng-binding">Table Lite</h3>
+        <p class="text-muted ng-binding">- simple table UI that renders your local data models and does local pagination/sorting</p>
+        <div ng-controller="treebrowserCtrl" class="ng-scope">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <h4 class="text-danger">Code</h4>
+                    <code-navigator files="module.docFiles" base-path="src/tablelite/docs/" class="ng-isolate-scope"><div class="code-navigator">
+    <div>
+        <ul class="nav nav-tabs" role="tablist">
+            <!-- ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope active">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">tablelite.view.html</a>
+            </li><!-- end ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">tablelite.ctrl.js</a>
+            </li><!-- end ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">buyCell.html</a>
+            </li><!-- end ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">carMoreInfo.html</a>
+            </li><!-- end ngRepeat: file in files -->
+        </ul>
+    </div>
+    <div>
+        <markdown src="src/tablelite/docs/tablelite.view.html"><pre><code class=" hljs xml">  <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-muted"</span>&gt;</span>
+    Cars Selected: <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"badge"</span> <span class="hljs-attribute">ng-bind</span>=<span class="hljs-value">"models.selectedCars.length"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Search: <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">placeholder</span>=<span class="hljs-value">" enter search text "</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"models.searchText"</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- ========== Usage ========== --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">ad-table-lite</span> <span class="hljs-attribute">table-name</span>=<span class="hljs-value">"carsForSale"</span>
+                 <span class="hljs-attribute">enable-column-search</span>=<span class="hljs-value">"true"</span>
+                 <span class="hljs-attribute">column-definition</span>=<span class="hljs-value">"carsTableColumnDefinition"</span>
+                 <span class="hljs-attribute">local-data-source</span>=<span class="hljs-value">"models.carsForSale"</span>
+                 <span class="hljs-attribute">page-sizes</span>=<span class="hljs-value">"[7, 20]"</span>
+                 <span class="hljs-attribute">pagination-btn-group-classes</span>=<span class="hljs-value">"pagination pagination-sm"</span>
+                 <span class="hljs-attribute">table-classes</span>=<span class="hljs-value">"table table-bordered"</span>
+                 <span class="hljs-attribute">items-not-found-message</span>=<span class="hljs-value">"Cars Not Found"</span>
+                 <span class="hljs-attribute">selected-items</span>=<span class="hljs-value">"models.selectedCars"</span>
+                 <span class="hljs-attribute">snug-sort-icons</span>=<span class="hljs-value">"true"</span>
+                 <span class="hljs-attribute">search-text</span>=<span class="hljs-value">"models.searchText"</span>
+                 <span class="hljs-attribute">state</span>=<span class="hljs-value">"models.state"</span>
+                 <span class="hljs-attribute">on-state-change</span>=<span class="hljs-value">"onStateChange"</span>
+                 <span class="hljs-attribute">row-class-provider</span>=<span class="hljs-value">"checkRowSelected"</span>
+                 <span class="hljs-attribute">row-expand-template</span>=<span class="hljs-value">"src/tablelite/docs/carMoreInfo.html"</span>
+                 <span class="hljs-attribute">row-expand-callback</span>=<span class="hljs-value">"rowExpanded"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">ad-table-lite</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-muted"</span>&gt;</span>Selected Items:<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"well"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>{{ models.selectedCars }}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"text-muted"</span>&gt;</span>Drag Data Change Log:<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"well"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>{{ models.changeInfo }}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre></markdown>
+    </div>
+</div></code-navigator>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <h4 class="text-primary">
+                      Demo
+                      <!-- ngIf: module.playGroundUrl --><a class="btn btn-link btn-sm ng-scope" target="_blank" ng-if="module.playGroundUrl" ng-href="http://jsfiddle.net/kashjs/gt8Ljspf/" href="http://jsfiddle.net/kashjs/gt8Ljspf/">
+                        <i class="glyphicon glyphicon-edit"></i> jsFiddle
+                      </a><!-- end ngIf: module.playGroundUrl -->
+                    </h4>
+                    <!-- ngInclude: undefined --><ng-include src="&#39;src/&#39; + module.moduleName + &#39;/docs/&#39; + module.moduleName + &#39;.view.html&#39;" class="ng-scope"><div ng-controller="tableliteCtrl" class="ng-scope">
+
+  <!-- ad_example_start -->
+  <p class="text-muted">
+    Cars Selected: <span class="badge ng-binding" ng-bind="models.selectedCars.length">1</span>
+    &nbsp;&nbsp;&nbsp;&nbsp;Search: <input type="text" placeholder=" enter search text " ng-model="models.searchText" class="ng-pristine ng-untouched ng-valid"></p>
+
+  <!-- ========== Usage ========== -->
+  <ad-table-lite table-name="carsForSale" enable-column-search="true" column-definition="carsTableColumnDefinition" local-data-source="models.carsForSale" page-sizes="[7, 20]" pagination-btn-group-classes="pagination pagination-sm" table-classes="table table-bordered" items-not-found-message="Cars Not Found" selected-items="models.selectedCars" snug-sort-icons="true" search-text="models.searchText" state="models.state" on-state-change="onStateChange" row-class-provider="checkRowSelected" row-expand-template="src/tablelite/docs/carMoreInfo.html" row-expand-callback="rowExpanded" class="ng-scope"><!-- ngIf: items.allItems.length || !attrs.itemsNotFoundMessage || attrs.enableColumnSearch --><div class="ad-table-lite-container ng-scope" ng-if="items.allItems.length || !attrs.itemsNotFoundMessage || attrs.enableColumnSearch"><!-- ngIf: attrs.tableMaxHeight || attrs.tableFixedHeight --><div class="ad-table-container" ng-style="{&#39;max-height&#39;: attrs.tableMaxHeight, &#39;height&#39;: attrs.tableFixedHeight}"><table class="table table-bordered" ng-class="{&#39;ad-fixed-layout&#39;: (attrs.tableMaxHeight || attrs.tableFixedHeight)}"><thead><!-- ngIf: !(attrs.tableMaxHeight || attrs.tableFixedHeight) --><!-- ngInclude: 'tablelite/headerRowContent.html' --><tr class="ad-user-select-none ng-scope" ng-if="!(attrs.tableMaxHeight || attrs.tableFixedHeight)" ng-include="&#39;tablelite/headerRowContent.html&#39;"><!-- ngIf: attrs.draggable --><!-- ngIf: attrs.rowExpandTemplate --><th class="ad-select-cell ng-scope" ng-if="attrs.rowExpandTemplate"><i></i></th><!-- end ngIf: attrs.rowExpandTemplate --><!-- ngIf: attrs.selectedItems && items.allItems --><th class="ad-select-cell ng-scope" ng-if="attrs.selectedItems &amp;&amp; items.allItems"><!-- ngIf: !attrs.enableColumnSearch --></th><!-- end ngIf: attrs.selectedItems && items.allItems --><!-- ngRepeat: definition in visibleColumnDefinition --><th data-ng-repeat="definition in visibleColumnDefinition" ng-click="sortByColumn(definition)" ng-class="{&#39;ad-cursor-pointer&#39;: definition.sortKey}" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope ad-cursor-pointer"><!-- ngIf: !attrs.snugSortIcons --><!-- ngIf: definition.columnHeaderTemplate --><div class="ad-display-inline-block ng-binding" ng-bind="definition.columnHeaderDisplayName">Model</div><!-- ngIf: attrs.snugSortIcons --><!-- ngInclude: undefined --><ng-include src="&#39;tablelite/sortIcons.html&#39;" ng-if="attrs.snugSortIcons" class="ng-scope"><!-- ngIf: definition.sortKey && localConfig.sortState.sortKey == definition.sortKey --><div ng-class="{&#39;ad-display-inline-block&#39;: attrs.snugSortIcons, &#39;pull-right&#39;: !attrs.snugSortIcons}" ng-if="definition.sortKey &amp;&amp; localConfig.sortState.sortKey == definition.sortKey" class="ng-scope ad-display-inline-block"><i ng-class="iconClasses.sortAscending" ng-show="localConfig.sortState.sortDirection === &#39;ASC&#39;" class="ng-hide glyphicon glyphicon-chevron-up"></i> <i ng-class="iconClasses.sortDescending" ng-show="localConfig.sortState.sortDirection === &#39;DEC&#39;" class="glyphicon glyphicon-chevron-down"></i></div><!-- end ngIf: definition.sortKey && localConfig.sortState.sortKey == definition.sortKey --><!-- ngIf: definition.sortKey && localConfig.sortState.sortKey != definition.sortKey --></ng-include><!-- end ngIf: attrs.snugSortIcons --></th><!-- end ngRepeat: definition in visibleColumnDefinition --><th data-ng-repeat="definition in visibleColumnDefinition" ng-click="sortByColumn(definition)" ng-class="{&#39;ad-cursor-pointer&#39;: definition.sortKey}" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope ad-cursor-pointer" style="width: 12em;"><!-- ngIf: !attrs.snugSortIcons --><!-- ngIf: definition.columnHeaderTemplate --><div class="ad-display-inline-block ng-scope" ng-if="definition.columnHeaderTemplate" ad-compile-template="definition.columnHeaderTemplate"><span class="ng-scope"><i class="glyphicon glyphicon-calendar"></i> Model Year</span></div><!-- end ngIf: definition.columnHeaderTemplate --><div class="ad-display-inline-block ng-binding" ng-bind="definition.columnHeaderDisplayName"></div><!-- ngIf: attrs.snugSortIcons --><!-- ngInclude: undefined --><ng-include src="&#39;tablelite/sortIcons.html&#39;" ng-if="attrs.snugSortIcons" class="ng-scope"><!-- ngIf: definition.sortKey && localConfig.sortState.sortKey == definition.sortKey --><!-- ngIf: definition.sortKey && localConfig.sortState.sortKey != definition.sortKey --><div ng-class="{&#39;ad-display-inline-block&#39;: attrs.snugSortIcons, &#39;pull-right&#39;: !attrs.snugSortIcons}" ng-if="definition.sortKey &amp;&amp; localConfig.sortState.sortKey != definition.sortKey" class="ng-scope ad-display-inline-block"><i ng-class="iconClasses.sortable" class="glyphicon glyphicon-resize-vertical"></i></div><!-- end ngIf: definition.sortKey && localConfig.sortState.sortKey != definition.sortKey --></ng-include><!-- end ngIf: attrs.snugSortIcons --></th><!-- end ngRepeat: definition in visibleColumnDefinition --><th data-ng-repeat="definition in visibleColumnDefinition" ng-click="sortByColumn(definition)" ng-class="{&#39;ad-cursor-pointer&#39;: definition.sortKey}" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope ad-cursor-pointer" style="width: 9em;"><!-- ngIf: !attrs.snugSortIcons --><!-- ngIf: definition.columnHeaderTemplate --><div class="ad-display-inline-block ng-scope" ng-if="definition.columnHeaderTemplate" ad-compile-template="definition.columnHeaderTemplate"><span class="ng-scope"><i class="glyphicon glyphicon-usd"></i> Price</span></div><!-- end ngIf: definition.columnHeaderTemplate --><div class="ad-display-inline-block ng-binding" ng-bind="definition.columnHeaderDisplayName"></div><!-- ngIf: attrs.snugSortIcons --><!-- ngInclude: undefined --><ng-include src="&#39;tablelite/sortIcons.html&#39;" ng-if="attrs.snugSortIcons" class="ng-scope"><!-- ngIf: definition.sortKey && localConfig.sortState.sortKey == definition.sortKey --><!-- ngIf: definition.sortKey && localConfig.sortState.sortKey != definition.sortKey --><div ng-class="{&#39;ad-display-inline-block&#39;: attrs.snugSortIcons, &#39;pull-right&#39;: !attrs.snugSortIcons}" ng-if="definition.sortKey &amp;&amp; localConfig.sortState.sortKey != definition.sortKey" class="ng-scope ad-display-inline-block"><i ng-class="iconClasses.sortable" class="glyphicon glyphicon-resize-vertical"></i></div><!-- end ngIf: definition.sortKey && localConfig.sortState.sortKey != definition.sortKey --></ng-include><!-- end ngIf: attrs.snugSortIcons --></th><!-- end ngRepeat: definition in visibleColumnDefinition --><th data-ng-repeat="definition in visibleColumnDefinition" ng-click="sortByColumn(definition)" ng-class="{&#39;ad-cursor-pointer&#39;: definition.sortKey}" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 4em;"><!-- ngIf: !attrs.snugSortIcons --><!-- ngIf: definition.columnHeaderTemplate --><div class="ad-display-inline-block ng-binding" ng-bind="definition.columnHeaderDisplayName">Buy</div><!-- ngIf: attrs.snugSortIcons --><!-- ngInclude: undefined --><ng-include src="&#39;tablelite/sortIcons.html&#39;" ng-if="attrs.snugSortIcons" class="ng-scope"><!-- ngIf: definition.sortKey && localConfig.sortState.sortKey == definition.sortKey --><!-- ngIf: definition.sortKey && localConfig.sortState.sortKey != definition.sortKey --></ng-include><!-- end ngIf: attrs.snugSortIcons --></th><!-- end ngRepeat: definition in visibleColumnDefinition --></tr><!-- end ngIf: !(attrs.tableMaxHeight || attrs.tableFixedHeight) --><!-- ngIf: !(attrs.tableMaxHeight || attrs.tableFixedHeight) && attrs.enableColumnSearch --><!-- ngInclude: 'tablelite/headerRowFilterContent.html' --><tr class="ad-user-select-none ng-scope" ng-if="!(attrs.tableMaxHeight || attrs.tableFixedHeight) &amp;&amp; attrs.enableColumnSearch" ng-include="&#39;tablelite/headerRowFilterContent.html&#39;"><!-- ngIf: attrs.draggable --><!-- ngIf: attrs.rowExpandTemplate --><th class="ad-select-cell ng-scope" ng-if="attrs.rowExpandTemplate"><i></i></th><!-- end ngIf: attrs.rowExpandTemplate --><!-- ngIf: attrs.selectedItems && items.allItems --><th class="ad-select-cell ng-scope" ng-if="attrs.selectedItems &amp;&amp; items.allItems"><!-- ngIf: attrs.enableColumnSearch --><input type="checkbox" class="ad-cursor-pointer ng-scope" ng-if="attrs.enableColumnSearch" ng-click="adStrapUtils.addRemoveItemsFromList(items.allItems, selectedItems)" ng-checked="adStrapUtils.itemsExistInList(items.allItems, selectedItems)"><!-- end ngIf: attrs.enableColumnSearch --></th><!-- end ngIf: attrs.selectedItems && items.allItems --><!-- ngRepeat: definition in visibleColumnDefinition --><th data-ng-repeat="definition in visibleColumnDefinition" class="ng-scope"><!-- ngIf: definition.columnSearchProperty --><input ng-if="definition.columnSearchProperty" type="text" class="input-sm form-control ng-pristine ng-untouched ng-valid ng-scope" ng-model="filters[definition.columnSearchProperty]"><!-- end ngIf: definition.columnSearchProperty --></th><!-- end ngRepeat: definition in visibleColumnDefinition --><th data-ng-repeat="definition in visibleColumnDefinition" class="ng-scope"><!-- ngIf: definition.columnSearchProperty --><input ng-if="definition.columnSearchProperty" type="text" class="input-sm form-control ng-pristine ng-untouched ng-valid ng-scope" ng-model="filters[definition.columnSearchProperty]"><!-- end ngIf: definition.columnSearchProperty --></th><!-- end ngRepeat: definition in visibleColumnDefinition --><th data-ng-repeat="definition in visibleColumnDefinition" class="ng-scope"><!-- ngIf: definition.columnSearchProperty --><input ng-if="definition.columnSearchProperty" type="text" class="input-sm form-control ng-pristine ng-untouched ng-valid ng-scope" ng-model="filters[definition.columnSearchProperty]"><!-- end ngIf: definition.columnSearchProperty --></th><!-- end ngRepeat: definition in visibleColumnDefinition --><th data-ng-repeat="definition in visibleColumnDefinition" class="ng-scope"><!-- ngIf: definition.columnSearchProperty --></th><!-- end ngRepeat: definition in visibleColumnDefinition --></tr><!-- end ngIf: !(attrs.tableMaxHeight || attrs.tableFixedHeight) && attrs.enableColumnSearch --></thead><!-- ngIf: !localConfig.draggable --><!-- ngInclude: 'tablelite/defaultRow.html' --><tbody ng-if="!localConfig.draggable" ng-include="&#39;tablelite/defaultRow.html&#39;" class="ng-scope"><!-- ngRepeat: item in items.list --><!-- ngInclude: 'tablelite/rowContent.html' --><tr ng-repeat-start="item in items.list" ng-class="getRowClass(item, $index)" ng-include="&#39;tablelite/rowContent.html&#39;" ng-click="onRowClick(item, $event)" class="ng-scope row-0"><!-- ngIf: attrs.rowExpandTemplate --><td class="ad-select-cell ad-cursor-pointer ng-scope" ng-if="attrs.rowExpandTemplate" ng-click="toggle($event, $index, item)"><!-- ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><i ng-class="iconClasses.expand" ng-if="!adStrapUtils.itemExistsInList($index, localConfig.expandedItems)" class="ng-scope glyphicon glyphicon-plus-sign"></i><!-- end ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --> <!-- ngIf: adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --></td><!-- end ngIf: attrs.rowExpandTemplate --><!-- ngIf: attrs.draggable --><!-- ngIf: attrs.selectedItems --><td class="ad-select-cell ng-scope" ng-if="attrs.selectedItems"><input type="checkbox" class="ad-cursor-pointer" ng-checked="adStrapUtils.itemExistsInList(item, selectedItems)" ng-click="adStrapUtils.addRemoveItemFromList(item, selectedItems)"></td><!-- end ngIf: attrs.selectedItems --><!-- ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">BMW 328i</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 12em;"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><div ng-if="definition.template" class="ng-scope"><span ad-compile-template="definition.template"><strong class="ng-binding ng-scope">2012</strong></span></div><!-- end ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 9em;"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">$39,000.00</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 4em;"><!-- ngIf: definition.templateUrl --><div ng-if="definition.templateUrl" class="ng-scope"><!-- ngInclude: undefined --><ng-include src="definition.templateUrl" class="ng-scope"><button class="btn btn-primary btn-xs ng-scope" ng-click="buyCar(item)">Buy</button></ng-include></div><!-- end ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --></tr><!-- ngIf: attrs.rowExpandTemplate && adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><!-- end ngRepeat: item in items.list --><!-- ngInclude: 'tablelite/rowContent.html' --><tr ng-repeat-start="item in items.list" ng-class="getRowClass(item, $index)" ng-include="&#39;tablelite/rowContent.html&#39;" ng-click="onRowClick(item, $event)" class="ng-scope row-1"><!-- ngIf: attrs.rowExpandTemplate --><td class="ad-select-cell ad-cursor-pointer ng-scope" ng-if="attrs.rowExpandTemplate" ng-click="toggle($event, $index, item)"><!-- ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><i ng-class="iconClasses.expand" ng-if="!adStrapUtils.itemExistsInList($index, localConfig.expandedItems)" class="ng-scope glyphicon glyphicon-plus-sign"></i><!-- end ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --> <!-- ngIf: adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --></td><!-- end ngIf: attrs.rowExpandTemplate --><!-- ngIf: attrs.draggable --><!-- ngIf: attrs.selectedItems --><td class="ad-select-cell ng-scope" ng-if="attrs.selectedItems"><input type="checkbox" class="ad-cursor-pointer" ng-checked="adStrapUtils.itemExistsInList(item, selectedItems)" ng-click="adStrapUtils.addRemoveItemFromList(item, selectedItems)"></td><!-- end ngIf: attrs.selectedItems --><!-- ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">BMW 328i</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 12em;"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><div ng-if="definition.template" class="ng-scope"><span ad-compile-template="definition.template"><strong class="ng-binding ng-scope">2012</strong></span></div><!-- end ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 9em;"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">$39,000.00</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 4em;"><!-- ngIf: definition.templateUrl --><div ng-if="definition.templateUrl" class="ng-scope"><!-- ngInclude: undefined --><ng-include src="definition.templateUrl" class="ng-scope"><button class="btn btn-primary btn-xs ng-scope" ng-click="buyCar(item)">Buy</button></ng-include></div><!-- end ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --></tr><!-- ngIf: attrs.rowExpandTemplate && adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><!-- end ngRepeat: item in items.list --><!-- ngInclude: 'tablelite/rowContent.html' --><tr ng-repeat-start="item in items.list" ng-class="getRowClass(item, $index)" ng-include="&#39;tablelite/rowContent.html&#39;" ng-click="onRowClick(item, $event)" class="ng-scope row-2"><!-- ngIf: attrs.rowExpandTemplate --><td class="ad-select-cell ad-cursor-pointer ng-scope" ng-if="attrs.rowExpandTemplate" ng-click="toggle($event, $index, item)"><!-- ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><i ng-class="iconClasses.expand" ng-if="!adStrapUtils.itemExistsInList($index, localConfig.expandedItems)" class="ng-scope glyphicon glyphicon-plus-sign"></i><!-- end ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --> <!-- ngIf: adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --></td><!-- end ngIf: attrs.rowExpandTemplate --><!-- ngIf: attrs.draggable --><!-- ngIf: attrs.selectedItems --><td class="ad-select-cell ng-scope" ng-if="attrs.selectedItems"><input type="checkbox" class="ad-cursor-pointer" ng-checked="adStrapUtils.itemExistsInList(item, selectedItems)" ng-click="adStrapUtils.addRemoveItemFromList(item, selectedItems)"></td><!-- end ngIf: attrs.selectedItems --><!-- ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">Audi S8</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 12em;"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><div ng-if="definition.template" class="ng-scope"><span ad-compile-template="definition.template"><strong class="ng-binding ng-scope">2014</strong></span></div><!-- end ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 9em;"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">$100,000.00</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 4em;"><!-- ngIf: definition.templateUrl --><div ng-if="definition.templateUrl" class="ng-scope"><!-- ngInclude: undefined --><ng-include src="definition.templateUrl" class="ng-scope"><button class="btn btn-primary btn-xs ng-scope" ng-click="buyCar(item)">Buy</button></ng-include></div><!-- end ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --></tr><!-- ngIf: attrs.rowExpandTemplate && adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><!-- end ngRepeat: item in items.list --><!-- ngInclude: 'tablelite/rowContent.html' --><tr ng-repeat-start="item in items.list" ng-class="getRowClass(item, $index)" ng-include="&#39;tablelite/rowContent.html&#39;" ng-click="onRowClick(item, $event)" class="ng-scope row-3"><!-- ngIf: attrs.rowExpandTemplate --><td class="ad-select-cell ad-cursor-pointer ng-scope" ng-if="attrs.rowExpandTemplate" ng-click="toggle($event, $index, item)"><!-- ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><i ng-class="iconClasses.expand" ng-if="!adStrapUtils.itemExistsInList($index, localConfig.expandedItems)" class="ng-scope glyphicon glyphicon-plus-sign"></i><!-- end ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --> <!-- ngIf: adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --></td><!-- end ngIf: attrs.rowExpandTemplate --><!-- ngIf: attrs.draggable --><!-- ngIf: attrs.selectedItems --><td class="ad-select-cell ng-scope" ng-if="attrs.selectedItems"><input type="checkbox" class="ad-cursor-pointer" ng-checked="adStrapUtils.itemExistsInList(item, selectedItems)" ng-click="adStrapUtils.addRemoveItemFromList(item, selectedItems)"></td><!-- end ngIf: attrs.selectedItems --><!-- ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">Audi S8</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 12em;"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><div ng-if="definition.template" class="ng-scope"><span ad-compile-template="definition.template"><strong class="ng-binding ng-scope">2014</strong></span></div><!-- end ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 9em;"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">$100,000.00</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 4em;"><!-- ngIf: definition.templateUrl --><div ng-if="definition.templateUrl" class="ng-scope"><!-- ngInclude: undefined --><ng-include src="definition.templateUrl" class="ng-scope"><button class="btn btn-primary btn-xs ng-scope" ng-click="buyCar(item)">Buy</button></ng-include></div><!-- end ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --></tr><!-- ngIf: attrs.rowExpandTemplate && adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><!-- end ngRepeat: item in items.list --><!-- ngInclude: 'tablelite/rowContent.html' --><tr ng-repeat-start="item in items.list" ng-class="getRowClass(item, $index)" ng-include="&#39;tablelite/rowContent.html&#39;" ng-click="onRowClick(item, $event)" class="ng-scope row-4"><!-- ngIf: attrs.rowExpandTemplate --><td class="ad-select-cell ad-cursor-pointer ng-scope" ng-if="attrs.rowExpandTemplate" ng-click="toggle($event, $index, item)"><!-- ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><i ng-class="iconClasses.expand" ng-if="!adStrapUtils.itemExistsInList($index, localConfig.expandedItems)" class="ng-scope glyphicon glyphicon-plus-sign"></i><!-- end ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --> <!-- ngIf: adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --></td><!-- end ngIf: attrs.rowExpandTemplate --><!-- ngIf: attrs.draggable --><!-- ngIf: attrs.selectedItems --><td class="ad-select-cell ng-scope" ng-if="attrs.selectedItems"><input type="checkbox" class="ad-cursor-pointer" ng-checked="adStrapUtils.itemExistsInList(item, selectedItems)" ng-click="adStrapUtils.addRemoveItemFromList(item, selectedItems)"></td><!-- end ngIf: attrs.selectedItems --><!-- ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">Audi S8</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 12em;"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><div ng-if="definition.template" class="ng-scope"><span ad-compile-template="definition.template"><strong class="ng-binding ng-scope">2014</strong></span></div><!-- end ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 9em;"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">$100,000.00</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 4em;"><!-- ngIf: definition.templateUrl --><div ng-if="definition.templateUrl" class="ng-scope"><!-- ngInclude: undefined --><ng-include src="definition.templateUrl" class="ng-scope"><button class="btn btn-primary btn-xs ng-scope" ng-click="buyCar(item)">Buy</button></ng-include></div><!-- end ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --></tr><!-- ngIf: attrs.rowExpandTemplate && adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><!-- end ngRepeat: item in items.list --><!-- ngInclude: 'tablelite/rowContent.html' --><tr ng-repeat-start="item in items.list" ng-class="getRowClass(item, $index)" ng-include="&#39;tablelite/rowContent.html&#39;" ng-click="onRowClick(item, $event)" class="ng-scope row-5"><!-- ngIf: attrs.rowExpandTemplate --><td class="ad-select-cell ad-cursor-pointer ng-scope" ng-if="attrs.rowExpandTemplate" ng-click="toggle($event, $index, item)"><!-- ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><i ng-class="iconClasses.expand" ng-if="!adStrapUtils.itemExistsInList($index, localConfig.expandedItems)" class="ng-scope glyphicon glyphicon-plus-sign"></i><!-- end ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --> <!-- ngIf: adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --></td><!-- end ngIf: attrs.rowExpandTemplate --><!-- ngIf: attrs.draggable --><!-- ngIf: attrs.selectedItems --><td class="ad-select-cell ng-scope" ng-if="attrs.selectedItems"><input type="checkbox" class="ad-cursor-pointer" ng-checked="adStrapUtils.itemExistsInList(item, selectedItems)" ng-click="adStrapUtils.addRemoveItemFromList(item, selectedItems)"></td><!-- end ngIf: attrs.selectedItems --><!-- ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">Audi S8</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 12em;"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><div ng-if="definition.template" class="ng-scope"><span ad-compile-template="definition.template"><strong class="ng-binding ng-scope">2014</strong></span></div><!-- end ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 9em;"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">$100,000.00</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 4em;"><!-- ngIf: definition.templateUrl --><div ng-if="definition.templateUrl" class="ng-scope"><!-- ngInclude: undefined --><ng-include src="definition.templateUrl" class="ng-scope"><button class="btn btn-primary btn-xs ng-scope" ng-click="buyCar(item)">Buy</button></ng-include></div><!-- end ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --></tr><!-- ngIf: attrs.rowExpandTemplate && adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><!-- end ngRepeat: item in items.list --><!-- ngInclude: 'tablelite/rowContent.html' --><tr ng-repeat-start="item in items.list" ng-class="getRowClass(item, $index)" ng-include="&#39;tablelite/rowContent.html&#39;" ng-click="onRowClick(item, $event)" class="ng-scope row-6"><!-- ngIf: attrs.rowExpandTemplate --><td class="ad-select-cell ad-cursor-pointer ng-scope" ng-if="attrs.rowExpandTemplate" ng-click="toggle($event, $index, item)"><!-- ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><i ng-class="iconClasses.expand" ng-if="!adStrapUtils.itemExistsInList($index, localConfig.expandedItems)" class="ng-scope glyphicon glyphicon-plus-sign"></i><!-- end ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --> <!-- ngIf: adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --></td><!-- end ngIf: attrs.rowExpandTemplate --><!-- ngIf: attrs.draggable --><!-- ngIf: attrs.selectedItems --><td class="ad-select-cell ng-scope" ng-if="attrs.selectedItems"><input type="checkbox" class="ad-cursor-pointer" ng-checked="adStrapUtils.itemExistsInList(item, selectedItems)" ng-click="adStrapUtils.addRemoveItemFromList(item, selectedItems)"></td><!-- end ngIf: attrs.selectedItems --><!-- ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">Audi A6</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 12em;"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><div ng-if="definition.template" class="ng-scope"><span ad-compile-template="definition.template"><strong class="ng-binding ng-scope">2012</strong></span></div><!-- end ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 9em;"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">$44,000.00</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 4em;"><!-- ngIf: definition.templateUrl --><div ng-if="definition.templateUrl" class="ng-scope"><!-- ngInclude: undefined --><ng-include src="definition.templateUrl" class="ng-scope"><button class="btn btn-primary btn-xs ng-scope" ng-click="buyCar(item)">Buy</button></ng-include></div><!-- end ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --></tr><!-- ngIf: attrs.rowExpandTemplate && adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><!-- end ngRepeat: item in items.list --></tbody><!-- end ngIf: !localConfig.draggable --><!-- ngIf: localConfig.draggable --></table></div><!-- ngInclude: undefined --><ng-include src="&#39;tablelite/pagination.html&#39;" class="ng-scope"><!-- ngIf: !attrs.disablePaging --><div class="row ad-table-pagination-container ng-scope" ng-if="!attrs.disablePaging"><div class="col-md-8 col-sm-8 text-left"><ul ng-class="attrs.paginationBtnGroupClasses || &#39;pagination pagination-sm&#39;" class="pagination pagination-sm"><li><a ng-click="loadPage(1)" class="ad-cursor-pointer" ng-disabled="items.paging.currentPage == 1" disabled="disabled"><i ng-class="iconClasses.firstPage" class="glyphicon glyphicon-fast-backward"></i></a></li><li><!-- ngIf: !attrs.draggable --><a ng-if="!attrs.draggable" class="ad-cursor-pointer ng-scope" ng-click="loadPreviousPage()" ng-disabled="items.paging.currentPage == 1" disabled="disabled"><i ng-class="iconClasses.previousPage" class="glyphicon glyphicon-backward"></i></a><!-- end ngIf: !attrs.draggable --></li><li><!-- ngIf: attrs.draggable --></li><!-- ngRepeat: page in localConfig.pagingArray --><li ng-repeat="page in localConfig.pagingArray" ng-class="{active: items.paging.currentPage == page}" class="ng-scope active"><a ng-click="loadPage(page)" class="ad-cursor-pointer ng-binding">1</a></li><!-- end ngRepeat: page in localConfig.pagingArray --><li ng-repeat="page in localConfig.pagingArray" ng-class="{active: items.paging.currentPage == page}" class="ng-scope"><a ng-click="loadPage(page)" class="ad-cursor-pointer ng-binding">2</a></li><!-- end ngRepeat: page in localConfig.pagingArray --><li><!-- ngIf: !attrs.draggable --><a ng-if="!attrs.draggable" class="ad-cursor-pointer ng-scope" ng-click="loadNextPage()" ng-disabled="items.paging.currentPage == items.paging.totalPages"><i ng-class="iconClasses.nextPage" class="glyphicon glyphicon-forward"></i></a><!-- end ngIf: !attrs.draggable --></li><li><!-- ngIf: attrs.draggable --></li><li><a ng-click="loadLastPage()" class="ad-cursor-pointer" ng-disabled="items.paging.currentPage == items.paging.totalPages"><i ng-class="iconClasses.lastPage" class="glyphicon glyphicon-fast-forward"></i></a></li></ul></div><div class="col-md-4 col-sm-4 text-right"><ul ng-class="attrs.paginationBtnGroupClasses || &#39;pagination pagination-sm&#39;" class="pagination pagination-sm"><!-- ngRepeat: size in items.paging.pageSizes --><li ng-repeat="size in items.paging.pageSizes" ng-class="{active: items.paging.pageSize == size}" class="ng-scope active"><a ng-click="pageSizeChanged(size)" class="ad-cursor-pointer ng-binding">7</a></li><!-- end ngRepeat: size in items.paging.pageSizes --><li ng-repeat="size in items.paging.pageSizes" ng-class="{active: items.paging.pageSize == size}" class="ng-scope"><a ng-click="pageSizeChanged(size)" class="ad-cursor-pointer ng-binding">20</a></li><!-- end ngRepeat: size in items.paging.pageSizes --></ul></div></div><!-- end ngIf: !attrs.disablePaging --></ng-include></div><!-- end ngIf: items.allItems.length || !attrs.itemsNotFoundMessage || attrs.enableColumnSearch --><!-- ngIf: !localConfig.localData.length && attrs.itemsNotFoundMessage && !attrs.enableColumnSearch --></ad-table-lite>
+
+  <h3 class="text-muted">Selected Items:</h3>
+  <div class="well">
+    <span class="ng-binding">[{"id":1,"name":"Audi A4","modelYear":2009,"price":34000}]</span>
+  </div>
+
+  <h3 class="text-muted">Drag Data Change Log:</h3>
+  <div class="well">
+    <span class="ng-binding">[]</span>
+  </div>
+  <!-- ad_example_end -->
+
+</div>
+</ng-include>
+                </div>
+            </div>
+            <div>
+                <div>
+                  <span class="btn btn-link btn-lg" ng-click="module.showOptions = !module.showOptions">
+                    <i class="fa fa-plus" ng-hide="module.showOptions"></i>
+                    <i class="fa fa-minus ng-hide" ng-show="module.showOptions"></i>
+                    Options
+                  </span>
+                </div>
+                <!-- ngIf: module.showOptions -->
+            </div>
+            <div>
+              <div>
+                 <span class="btn btn-link btn-lg" ng-click="module.showMoreInfo = !module.showMoreInfo">
+                   <i class="fa fa-plus" ng-hide="module.showMoreInfo"></i>
+                   <i class="fa fa-minus ng-hide" ng-show="module.showMoreInfo"></i>
+                   More Info
+                 </span>
+              </div>
+              <!-- ngIf: module.showMoreInfo -->
+            </div>
+        </div>
+    </div><!-- end ngRepeat: module in modules --><div class="module-section ng-scope" ng-repeat="module in modules" id="tableajax">
+        <h3 class="ng-binding">Table AJAX</h3>
+        <p class="text-muted ng-binding">- advanced table UI that renders remote data models and does remote pagination/sorting</p>
+        <div ng-controller="treebrowserCtrl" class="ng-scope">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <h4 class="text-danger">Code</h4>
+                    <code-navigator files="module.docFiles" base-path="src/tableajax/docs/" class="ng-isolate-scope"><div class="code-navigator">
+    <div>
+        <ul class="nav nav-tabs" role="tablist">
+            <!-- ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope active">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">tableajax.view.html</a>
+            </li><!-- end ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">tableajax.ctrl.js</a>
+            </li><!-- end ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">artistPicture.html</a>
+            </li><!-- end ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">artistMoreInfo.html</a>
+            </li><!-- end ngRepeat: file in files -->
+        </ul>
+    </div>
+    <div>
+        <markdown src="src/tableajax/docs/tableajax.view.html"><pre><code class=" hljs xml">      <span class="hljs-comment">&lt;!-- ========== Simple Table Implementation ========== --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">ad-table-ajax</span> <span class="hljs-attribute">table-name</span>=<span class="hljs-value">"artistsTable"</span>
+                     <span class="hljs-attribute">column-definition</span>=<span class="hljs-value">"artistsColumnDef"</span>
+                     <span class="hljs-attribute">table-classes</span>=<span class="hljs-value">"table table-bordered"</span>
+                     <span class="hljs-attribute">page-sizes</span>=<span class="hljs-value">"[5, 20, 50]"</span>
+                     <span class="hljs-attribute">pagination-btn-group-classes</span>=<span class="hljs-value">"pagination pagination-xs"</span>
+                     <span class="hljs-attribute">items-not-found-message</span>=<span class="hljs-value">"Artists Not Found"</span>
+                     <span class="hljs-attribute">ajax-config</span>=<span class="hljs-value">"artistsAjaxConfig"</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">ad-table-ajax</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!--========== Advanced Implementation with search ========== --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"panel panel-default"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"panel-heading"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"col-lg-6"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"input-group"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"form-control"</span> <span class="hljs-attribute">ng-change</span>=<span class="hljs-value">"searchArtist()"</span> <span class="hljs-attribute">ng-model</span>=<span class="hljs-value">"artistSearchKey"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"input-group-addon"</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"glyphicon glyphicon-search"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"panel-body"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">ad-table-ajax</span> <span class="hljs-attribute">table-name</span>=<span class="hljs-value">"artistsTableSearch"</span>
+                     <span class="hljs-attribute">column-definition</span>=<span class="hljs-value">"artistsColumnDefSearch"</span>
+                     <span class="hljs-attribute">table-classes</span>=<span class="hljs-value">"table table-bordered"</span>
+                     <span class="hljs-attribute">page-sizes</span>=<span class="hljs-value">"[5, 20, 50]"</span>
+                     <span class="hljs-attribute">pagination-btn-group-classes</span>=<span class="hljs-value">"pagination pagination-sm"</span>
+                     <span class="hljs-attribute">ajax-config</span>=<span class="hljs-value">"artistsAjaxConfigSearch"</span>
+                     <span class="hljs-attribute">page-loader</span>=<span class="hljs-value">"methods.pageLoader"</span>
+                     <span class="hljs-attribute">row-expand-callback</span>=<span class="hljs-value">"populateShoppingMessage"</span>
+                     <span class="hljs-attribute">row-class-provider</span>=<span class="hljs-value">"checkRowSelected"</span>
+                     <span class="hljs-attribute">row-expand-template</span>=<span class="hljs-value">"src/tableajax/docs/artistMoreInfo.html"</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">ad-table-ajax</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre></markdown>
+    </div>
+</div></code-navigator>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <h4 class="text-primary">
+                      Demo
+                      <!-- ngIf: module.playGroundUrl --><a class="btn btn-link btn-sm ng-scope" target="_blank" ng-if="module.playGroundUrl" ng-href="http://jsfiddle.net/kashjs/1f806L2k/" href="http://jsfiddle.net/kashjs/1f806L2k/">
+                        <i class="glyphicon glyphicon-edit"></i> jsFiddle
+                      </a><!-- end ngIf: module.playGroundUrl -->
+                    </h4>
+                    <!-- ngInclude: undefined --><ng-include src="&#39;src/&#39; + module.moduleName + &#39;/docs/&#39; + module.moduleName + &#39;.view.html&#39;" class="ng-scope"><div ng-controller="tableajaxCtrl" class="ng-scope">
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <!-- ad_example_start -->
+      <!-- ========== Simple Table Implementation ========== -->
+      <ad-table-ajax table-name="artistsTable" column-definition="artistsColumnDef" table-classes="table table-bordered" page-sizes="[5, 20, 50]" pagination-btn-group-classes="pagination pagination-xs" items-not-found-message="Artists Not Found" ajax-config="artistsAjaxConfig" class="ng-scope"><!-- ngIf: items.paging.totalPages || localConfig.loadingData || !attrs.itemsNotFoundMessage --><!-- ngIf: localConfig.showNoDataFoundMessage && !localConfig.loadingData && attrs.itemsNotFoundMessage --><div ng-if="localConfig.showNoDataFoundMessage &amp;&amp; !localConfig.loadingData &amp;&amp; attrs.itemsNotFoundMessage" class="ng-scope"><div class="alert alert-info ng-binding" role="alert">Artists Not Found</div></div><!-- end ngIf: localConfig.showNoDataFoundMessage && !localConfig.loadingData && attrs.itemsNotFoundMessage --></ad-table-ajax>
+      <!-- ad_example_end -->
+    </div>
+  </div>
+
+  <!-- ad_example_start -->
+  <!--========== Advanced Implementation with search ========== -->
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-change="searchArtist()" ng-model="artistSearchKey">
+            <span class="input-group-addon">
+              <i class="glyphicon glyphicon-search"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-body">
+      <ad-table-ajax table-name="artistsTableSearch" column-definition="artistsColumnDefSearch" table-classes="table table-bordered" page-sizes="[5, 20, 50]" pagination-btn-group-classes="pagination pagination-sm" ajax-config="artistsAjaxConfigSearch" page-loader="methods.pageLoader" row-expand-callback="populateShoppingMessage" row-class-provider="checkRowSelected" row-expand-template="src/tableajax/docs/artistMoreInfo.html" class="ng-scope"><!-- ngIf: items.paging.totalPages || localConfig.loadingData || !attrs.itemsNotFoundMessage --><div class="ad-table-ajax-container ng-scope" ng-if="items.paging.totalPages || localConfig.loadingData || !attrs.itemsNotFoundMessage"><!-- ngIf: attrs.tableMaxHeight || attrs.tableFixedHeight --><div class="ad-table-container" ng-style="{&#39;max-height&#39;: localConfig.tableMaxHeight, &#39;height&#39; : attrs.tableFixedHeight}"><table class="table table-bordered" ng-class="{&#39;ad-fixed-layout&#39;: (attrs.tableMaxHeight || attrs.tableFixedHeight)}"><thead><!-- ngIf: !(localConfig.tableMaxHeight || attrs.tableFixedHeight) --><!-- ngInclude: 'tableajax/headerRowContent.html' --><tr class="ad-user-select-none ng-scope" ng-if="!(localConfig.tableMaxHeight || attrs.tableFixedHeight)" ng-include="&#39;tableajax/headerRowContent.html&#39;"><!-- ngIf: attrs.rowExpandTemplate --><th class="ad-select-cell ng-scope" ng-if="attrs.rowExpandTemplate"><i></i></th><!-- end ngIf: attrs.rowExpandTemplate --><!-- ngRepeat: definition in visibleColumnDefinition --><th data-ng-repeat="definition in visibleColumnDefinition" ng-click="sortByColumn(definition)" ng-class="{&#39;ad-cursor-pointer&#39;: definition.sortKey}" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 7em;"><!-- ngIf: !attrs.snugSortIcons --><!-- ngInclude: undefined --><ng-include src="&#39;tableajax/sortIcons.html&#39;" ng-if="!attrs.snugSortIcons" class="ng-scope"><!-- ngIf: definition.sortKey && localConfig.sortState.sortKey == definition.sortKey --><!-- ngIf: definition.sortKey && localConfig.sortState.sortKey != definition.sortKey --></ng-include><!-- end ngIf: !attrs.snugSortIcons --><!-- ngIf: definition.columnHeaderTemplate --><div class="ad-display-inline-block ng-scope" ng-if="definition.columnHeaderTemplate" ad-compile-template="definition.columnHeaderTemplate"><em class="ng-scope">Picture</em></div><!-- end ngIf: definition.columnHeaderTemplate --><!-- ngIf: definition.columnHeaderDisplayName --><!-- ngIf: attrs.snugSortIcons --></th><!-- end ngRepeat: definition in visibleColumnDefinition --><th data-ng-repeat="definition in visibleColumnDefinition" ng-click="sortByColumn(definition)" ng-class="{&#39;ad-cursor-pointer&#39;: definition.sortKey}" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: !attrs.snugSortIcons --><!-- ngInclude: undefined --><ng-include src="&#39;tableajax/sortIcons.html&#39;" ng-if="!attrs.snugSortIcons" class="ng-scope"><!-- ngIf: definition.sortKey && localConfig.sortState.sortKey == definition.sortKey --><!-- ngIf: definition.sortKey && localConfig.sortState.sortKey != definition.sortKey --></ng-include><!-- end ngIf: !attrs.snugSortIcons --><!-- ngIf: definition.columnHeaderTemplate --><!-- ngIf: definition.columnHeaderDisplayName --><div class="ad-display-inline-block ng-binding ng-scope" ng-if="definition.columnHeaderDisplayName" ng-bind="definition.columnHeaderDisplayName">Name</div><!-- end ngIf: definition.columnHeaderDisplayName --><!-- ngIf: attrs.snugSortIcons --></th><!-- end ngRepeat: definition in visibleColumnDefinition --><th data-ng-repeat="definition in visibleColumnDefinition" ng-click="sortByColumn(definition)" ng-class="{&#39;ad-cursor-pointer&#39;: definition.sortKey}" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: !attrs.snugSortIcons --><!-- ngInclude: undefined --><ng-include src="&#39;tableajax/sortIcons.html&#39;" ng-if="!attrs.snugSortIcons" class="ng-scope"><!-- ngIf: definition.sortKey && localConfig.sortState.sortKey == definition.sortKey --><!-- ngIf: definition.sortKey && localConfig.sortState.sortKey != definition.sortKey --></ng-include><!-- end ngIf: !attrs.snugSortIcons --><!-- ngIf: definition.columnHeaderTemplate --><!-- ngIf: definition.columnHeaderDisplayName --><div class="ad-display-inline-block ng-binding ng-scope" ng-if="definition.columnHeaderDisplayName" ng-bind="definition.columnHeaderDisplayName">Profile</div><!-- end ngIf: definition.columnHeaderDisplayName --><!-- ngIf: attrs.snugSortIcons --></th><!-- end ngRepeat: definition in visibleColumnDefinition --></tr><!-- end ngIf: !(localConfig.tableMaxHeight || attrs.tableFixedHeight) --></thead><tbody><!-- ngRepeat: item in items.list --><!-- ngInclude: 'tableajax/rowContent.html' --><tr ng-repeat-start="item in items.list" ng-class="getRowClass(item, $index)" ng-include="&#39;tableajax/rowContent.html&#39;" ng-click="onRowClick(item, $event)" class="ng-scope"><!-- ngIf: attrs.rowExpandTemplate --><td class="ad-select-cell ad-cursor-pointer ng-scope" ng-if="attrs.rowExpandTemplate" ng-click="toggle($event, $index, item)"><!-- ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><i ng-class="iconClasses.expand" ng-if="!adStrapUtils.itemExistsInList($index, localConfig.expandedItems)" class="ng-scope glyphicon glyphicon-plus-sign"></i><!-- end ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --> <!-- ngIf: adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --></td><!-- end ngIf: attrs.rowExpandTemplate --><!-- ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 7em;"><!-- ngIf: definition.templateUrl --><div ng-if="definition.templateUrl" class="ng-scope"><!-- ngInclude: undefined --><ng-include src="definition.templateUrl" class="ng-scope"><span class="ng-scope">
+    <img class="thumbnail ad-margin-bottom-none" height="40" ng-src="http://img2-ak.lst.fm/i/u/64s/136cfeba28de4e9c81906aa54b133daa.png" src="./adapt-strap_files/136cfeba28de4e9c81906aa54b133daa.png">
+</span></ng-include></div><!-- end ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">50 Cent</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><div ng-if="definition.template" class="ng-scope"><span ad-compile-template="definition.template"><a href="http://www.last.fm/music/50+Cent" target="_blank" class="ng-scope">url</a></span></div><!-- end ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --></tr><!-- ngIf: attrs.rowExpandTemplate && adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><!-- end ngRepeat: item in items.list --><!-- ngInclude: 'tableajax/rowContent.html' --><tr ng-repeat-start="item in items.list" ng-class="getRowClass(item, $index)" ng-include="&#39;tableajax/rowContent.html&#39;" ng-click="onRowClick(item, $event)" class="ng-scope success"><!-- ngIf: attrs.rowExpandTemplate --><td class="ad-select-cell ad-cursor-pointer ng-scope" ng-if="attrs.rowExpandTemplate" ng-click="toggle($event, $index, item)"><!-- ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><i ng-class="iconClasses.expand" ng-if="!adStrapUtils.itemExistsInList($index, localConfig.expandedItems)" class="ng-scope glyphicon glyphicon-plus-sign"></i><!-- end ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --> <!-- ngIf: adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --></td><!-- end ngIf: attrs.rowExpandTemplate --><!-- ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 7em;"><!-- ngIf: definition.templateUrl --><div ng-if="definition.templateUrl" class="ng-scope"><!-- ngInclude: undefined --><ng-include src="definition.templateUrl" class="ng-scope"><span class="ng-scope">
+    <img class="thumbnail ad-margin-bottom-none" height="40" ng-src="http://img2-ak.lst.fm/i/u/64s/5e0380d2059a40e5857caa2b1566be83.png" src="./adapt-strap_files/5e0380d2059a40e5857caa2b1566be83.png">
+</span></ng-include></div><!-- end ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">50 Cent Feat. Justin Timberlake</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><div ng-if="definition.template" class="ng-scope"><span ad-compile-template="definition.template"><a href="http://www.last.fm/music/50+Cent+Feat.+Justin+Timberlake" target="_blank" class="ng-scope">url</a></span></div><!-- end ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --></tr><!-- ngIf: attrs.rowExpandTemplate && adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><!-- end ngRepeat: item in items.list --><!-- ngInclude: 'tableajax/rowContent.html' --><tr ng-repeat-start="item in items.list" ng-class="getRowClass(item, $index)" ng-include="&#39;tableajax/rowContent.html&#39;" ng-click="onRowClick(item, $event)" class="ng-scope"><!-- ngIf: attrs.rowExpandTemplate --><td class="ad-select-cell ad-cursor-pointer ng-scope" ng-if="attrs.rowExpandTemplate" ng-click="toggle($event, $index, item)"><!-- ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><i ng-class="iconClasses.expand" ng-if="!adStrapUtils.itemExistsInList($index, localConfig.expandedItems)" class="ng-scope glyphicon glyphicon-plus-sign"></i><!-- end ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --> <!-- ngIf: adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --></td><!-- end ngIf: attrs.rowExpandTemplate --><!-- ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 7em;"><!-- ngIf: definition.templateUrl --><div ng-if="definition.templateUrl" class="ng-scope"><!-- ngInclude: undefined --><ng-include src="definition.templateUrl" class="ng-scope"><span class="ng-scope">
+    <img class="thumbnail ad-margin-bottom-none" height="40" ng-src="http://img2-ak.lst.fm/i/u/64s/efdfb0cf58874ec1854dcf5418ed6d0d.png" src="./adapt-strap_files/efdfb0cf58874ec1854dcf5418ed6d0d.png">
+</span></ng-include></div><!-- end ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">Jeremih feat. 50 Cent</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><div ng-if="definition.template" class="ng-scope"><span ad-compile-template="definition.template"><a href="http://www.last.fm/music/Jeremih+feat.+50+Cent" target="_blank" class="ng-scope">url</a></span></div><!-- end ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --></tr><!-- ngIf: attrs.rowExpandTemplate && adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><!-- end ngRepeat: item in items.list --><!-- ngInclude: 'tableajax/rowContent.html' --><tr ng-repeat-start="item in items.list" ng-class="getRowClass(item, $index)" ng-include="&#39;tableajax/rowContent.html&#39;" ng-click="onRowClick(item, $event)" class="ng-scope success"><!-- ngIf: attrs.rowExpandTemplate --><td class="ad-select-cell ad-cursor-pointer ng-scope" ng-if="attrs.rowExpandTemplate" ng-click="toggle($event, $index, item)"><!-- ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><i ng-class="iconClasses.expand" ng-if="!adStrapUtils.itemExistsInList($index, localConfig.expandedItems)" class="ng-scope glyphicon glyphicon-plus-sign"></i><!-- end ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --> <!-- ngIf: adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --></td><!-- end ngIf: attrs.rowExpandTemplate --><!-- ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 7em;"><!-- ngIf: definition.templateUrl --><div ng-if="definition.templateUrl" class="ng-scope"><!-- ngInclude: undefined --><ng-include src="definition.templateUrl" class="ng-scope"><span class="ng-scope">
+    <img class="thumbnail ad-margin-bottom-none" height="40" ng-src="http://img2-ak.lst.fm/i/u/64s/d5cd990c7e1a4ab29e3b0fe523f7a6d9.png" src="./adapt-strap_files/d5cd990c7e1a4ab29e3b0fe523f7a6d9.png">
+</span></ng-include></div><!-- end ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">50 Cent, Eminem, Ca$his &amp; Lloyd Banks</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><div ng-if="definition.template" class="ng-scope"><span ad-compile-template="definition.template"><a href="http://www.last.fm/music/50+Cent,+Eminem,+Ca$his+&+Lloyd+Banks" target="_blank" class="ng-scope">url</a></span></div><!-- end ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --></tr><!-- ngIf: attrs.rowExpandTemplate && adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><!-- end ngRepeat: item in items.list --><!-- ngInclude: 'tableajax/rowContent.html' --><tr ng-repeat-start="item in items.list" ng-class="getRowClass(item, $index)" ng-include="&#39;tableajax/rowContent.html&#39;" ng-click="onRowClick(item, $event)" class="ng-scope"><!-- ngIf: attrs.rowExpandTemplate --><td class="ad-select-cell ad-cursor-pointer ng-scope" ng-if="attrs.rowExpandTemplate" ng-click="toggle($event, $index, item)"><!-- ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><i ng-class="iconClasses.expand" ng-if="!adStrapUtils.itemExistsInList($index, localConfig.expandedItems)" class="ng-scope glyphicon glyphicon-plus-sign"></i><!-- end ngIf: !adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --> <!-- ngIf: adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --></td><!-- end ngIf: attrs.rowExpandTemplate --><!-- ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope" style="width: 7em;"><!-- ngIf: definition.templateUrl --><div ng-if="definition.templateUrl" class="ng-scope"><!-- ngInclude: undefined --><ng-include src="definition.templateUrl" class="ng-scope"><span class="ng-scope">
+    <img class="thumbnail ad-margin-bottom-none" height="40" ng-src="http://img2-ak.lst.fm/i/u/64s/af4fc72610fc4cd7954c676d62bc135b.png" src="./adapt-strap_files/af4fc72610fc4cd7954c676d62bc135b.png">
+</span></ng-include></div><!-- end ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --><div ng-if="!definition.templateUrl &amp;&amp; !definition.template" class="ng-binding ng-scope">50 Cent F. Justin Timberlake and Timbaland</div><!-- end ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --><td data-ng-repeat="definition in visibleColumnDefinition" ng-style="{&#39;width&#39;: definition.width}" class="ng-scope"><!-- ngIf: definition.templateUrl --><!-- ngIf: definition.template --><div ng-if="definition.template" class="ng-scope"><span ad-compile-template="definition.template"><a href="http://www.last.fm/music/50+Cent+F.+Justin+Timberlake+and+Timbaland" target="_blank" class="ng-scope">url</a></span></div><!-- end ngIf: definition.template --><!-- ngIf: !definition.templateUrl && !definition.template --></td><!-- end ngRepeat: definition in visibleColumnDefinition --></tr><!-- ngIf: attrs.rowExpandTemplate && adStrapUtils.itemExistsInList($index, localConfig.expandedItems) --><!-- end ngRepeat: item in items.list --></tbody></table><ad-loading-overlay loading="localConfig.loadingData" class="ng-isolate-scope"><div class="ad-loading-overlay-container ng-hide" ng-class="containerClasses" ng-style="{&#39;z-index&#39;: zIndex || &#39;1000&#39;,&#39;position&#39;: position || &#39;absolute&#39;}" ng-show="loading" style="z-index: 1000; position: absolute;"><div class="wrapper"><div class="loading-indicator"><ad-loading-icon loading-icon-size="3em" loading-icon-class=""><i class="glyphicon glyphicon-refresh ad-spin ng-scope" ng-style="{&#39;font-size&#39;: &#39;3em&#39;}" style="font-size: 3em;"></i></ad-loading-icon></div></div></div></ad-loading-overlay></div><!-- ngInclude: undefined --><ng-include src="&#39;tableajax/pagination.html&#39;" class="ng-scope"><div class="row ad-table-pagination-container ng-scope"><div class="col-md-8 col-sm-8"><ul ng-class="attrs.paginationBtnGroupClasses || &#39;pagination pagination-sm&#39;" class="pagination pagination-sm"><li><a class="ad-cursor-pointer" ng-click="loadPage(1)" ng-disabled="items.paging.currentPage == 1" disabled="disabled"><i ng-class="iconClasses.firstPage" class="glyphicon glyphicon-fast-backward"></i></a></li><li><a class="ad-cursor-pointer" ng-click="loadPreviousPage()" ng-disabled="items.paging.currentPage == 1" disabled="disabled"><i ng-class="iconClasses.previousPage" class="glyphicon glyphicon-backward"></i></a></li><!-- ngRepeat: page in localConfig.pagingArray --><li ng-repeat="page in localConfig.pagingArray" ng-class="{active: items.paging.currentPage == page}" class="ng-scope active"><a class="ad-cursor-pointer ng-binding" ng-click="loadPage(page)">1</a></li><!-- end ngRepeat: page in localConfig.pagingArray --><li><a class="ad-cursor-pointer" ng-click="loadNextPage()" ng-disabled="items.paging.currentPage == items.paging.totalPages"><i ng-class="iconClasses.nextPage" class="glyphicon glyphicon-forward"></i></a></li><li><a class="ad-cursor-pointer" ng-click="loadLastPage()" ng-disabled="items.paging.currentPage == items.paging.totalPages"><i ng-class="iconClasses.lastPage" class="glyphicon glyphicon-fast-forward"></i></a></li></ul></div><div class="col-md-4 col-sm-4 text-right"><ul ng-class="attrs.paginationBtnGroupClasses || &#39;pagination pagination-sm&#39;" ng-show="items.paging.totalPages &gt; 1" class="ng-hide pagination pagination-sm"><!-- ngRepeat: size in items.paging.pageSizes --><li ng-repeat="size in items.paging.pageSizes" ng-class="{active: items.paging.pageSize == size}" class="ng-scope active"><a class="ad-cursor-pointer ng-binding" ng-click="pageSizeChanged(size)">5</a></li><!-- end ngRepeat: size in items.paging.pageSizes --><li ng-repeat="size in items.paging.pageSizes" ng-class="{active: items.paging.pageSize == size}" class="ng-scope"><a class="ad-cursor-pointer ng-binding" ng-click="pageSizeChanged(size)">20</a></li><!-- end ngRepeat: size in items.paging.pageSizes --><li ng-repeat="size in items.paging.pageSizes" ng-class="{active: items.paging.pageSize == size}" class="ng-scope"><a class="ad-cursor-pointer ng-binding" ng-click="pageSizeChanged(size)">50</a></li><!-- end ngRepeat: size in items.paging.pageSizes --></ul></div></div></ng-include></div><!-- end ngIf: items.paging.totalPages || localConfig.loadingData || !attrs.itemsNotFoundMessage --><!-- ngIf: localConfig.showNoDataFoundMessage && !localConfig.loadingData && attrs.itemsNotFoundMessage --></ad-table-ajax>
+    </div>
+  </div>
+  <!-- ad_example_end -->
+</div></ng-include>
+                </div>
+            </div>
+            <div>
+                <div>
+                  <span class="btn btn-link btn-lg" ng-click="module.showOptions = !module.showOptions">
+                    <i class="fa fa-plus" ng-hide="module.showOptions"></i>
+                    <i class="fa fa-minus ng-hide" ng-show="module.showOptions"></i>
+                    Options
+                  </span>
+                </div>
+                <!-- ngIf: module.showOptions -->
+            </div>
+            <div>
+              <div>
+                 <span class="btn btn-link btn-lg" ng-click="module.showMoreInfo = !module.showMoreInfo">
+                   <i class="fa fa-plus" ng-hide="module.showMoreInfo"></i>
+                   <i class="fa fa-minus ng-hide" ng-show="module.showMoreInfo"></i>
+                   More Info
+                 </span>
+              </div>
+              <!-- ngIf: module.showMoreInfo -->
+            </div>
+        </div>
+    </div><!-- end ngRepeat: module in modules --><div class="module-section ng-scope" ng-repeat="module in modules" id="treebrowser">
+        <h3 class="ng-binding">Tree Browser</h3>
+        <p class="text-muted ng-binding">- simple tree UI that allows you to brows through local data models in tree structure</p>
+        <div ng-controller="treebrowserCtrl" class="ng-scope">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <h4 class="text-danger">Code</h4>
+                    <code-navigator files="module.docFiles" base-path="src/treebrowser/docs/" class="ng-isolate-scope"><div class="code-navigator">
+    <div>
+        <ul class="nav nav-tabs" role="tablist">
+            <!-- ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope active">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">treebrowser.view.html</a>
+            </li><!-- end ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">treebrowser.ctrl.js</a>
+            </li><!-- end ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">treeNode.html</a>
+            </li><!-- end ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">treeHeader.html</a>
+            </li><!-- end ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">style.css</a>
+            </li><!-- end ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">treeNodeWithCustomToggle.html</a>
+            </li><!-- end ngRepeat: file in files -->
+        </ul>
+    </div>
+    <div>
+        <markdown src="src/treebrowser/docs/treebrowser.view.html"><pre><code class=" hljs xml">  <span class="hljs-comment">&lt;!-- ===== Usage with border &amp; header ===== --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">ad-tree-browser</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ad-border-default"</span>
+                   <span class="hljs-attribute">tree-name</span>=<span class="hljs-value">"treeDemoBordered"</span>
+                   <span class="hljs-attribute">row-ng-class</span>=<span class="hljs-value">"{added:item._selected}"</span>
+                   <span class="hljs-attribute">tree-root</span>=<span class="hljs-value">"root"</span>
+                   <span class="hljs-attribute">child-node</span>=<span class="hljs-value">"children"</span>
+                   <span class="hljs-attribute">children-padding</span>=<span class="hljs-value">"0"</span>
+                   <span class="hljs-attribute">bordered</span>=<span class="hljs-value">"true"</span>
+                   <span class="hljs-attribute">on-row-click</span>=<span class="hljs-value">"rowClicked"</span>
+                   <span class="hljs-attribute">node-header-url</span>=<span class="hljs-value">"src/treebrowser/docs/treeHeader.html"</span>
+                   <span class="hljs-attribute">node-template-url</span>=<span class="hljs-value">"src/treebrowser/docs/treeNodeWithCustomToggle.html"</span>
+                   <span class="hljs-attribute">custom-toggle</span>=<span class="hljs-value">"true"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">ad-tree-browser</span>&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- ===== Usage Simple ===== --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">ad-tree-browser</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ad-border-default"</span>
+                   <span class="hljs-attribute">tree-name</span>=<span class="hljs-value">"treeDemo"</span>
+                   <span class="hljs-attribute">row-ng-class</span>=<span class="hljs-value">"{added:item._selected}"</span>
+                   <span class="hljs-attribute">tree-root</span>=<span class="hljs-value">"root"</span>
+                   <span class="hljs-attribute">child-node</span>=<span class="hljs-value">"children"</span>
+                   <span class="hljs-attribute">children-padding</span>=<span class="hljs-value">"15"</span>
+                   <span class="hljs-attribute">node-template-url</span>=<span class="hljs-value">"src/treebrowser/docs/treeNode.html"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">ad-tree-browser</span>&gt;</span>
+</code></pre></markdown>
+    </div>
+</div></code-navigator>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <h4 class="text-primary">
+                      Demo
+                      <!-- ngIf: module.playGroundUrl --><a class="btn btn-link btn-sm ng-scope" target="_blank" ng-if="module.playGroundUrl" ng-href="http://jsfiddle.net/kashjs/056z7xtr/" href="http://jsfiddle.net/kashjs/056z7xtr/">
+                        <i class="glyphicon glyphicon-edit"></i> jsFiddle
+                      </a><!-- end ngIf: module.playGroundUrl -->
+                    </h4>
+                    <!-- ngInclude: undefined --><ng-include src="&#39;src/&#39; + module.moduleName + &#39;/docs/&#39; + module.moduleName + &#39;.view.html&#39;" class="ng-scope"><div ng-controller="treebrowserCtrl" class="ng-scope">
+  <p>With Border &amp; header</p>
+  <!-- ad_example_start -->
+  <!-- ===== Usage with border & header ===== -->
+  <ad-tree-browser class="ad-border-default ng-scope" tree-name="treeDemoBordered" row-ng-class="{added:item._selected}" tree-root="root" child-node="children" children-padding="0" bordered="true" on-row-click="rowClicked" node-header-url="src/treebrowser/docs/treeHeader.html" node-template-url="src/treebrowser/docs/treeNodeWithCustomToggle.html" custom-toggle="true"><div class="ad-tree-browser-container tree-bordered" ng-class="{&#39;tree-bordered&#39;: attrs.bordered}"><div data-level="0" class="tree-view"><div class="tree"><div><!-- ngIf: attrs.nodeHeaderUrl --><div class="tree-level tree-header-level border ng-scope" ng-if="attrs.nodeHeaderUrl"><div class="content" ng-style="{&#39;padding-left&#39;: (attrs.childrenPadding || 15) + &#39;px&#39;}" style="padding-left: 0px;"><div class="content-holder"><div></div><!-- ngInclude: attrs.nodeHeaderUrl --><div class="node-content ad-user-select-none ng-scope" ng-include="attrs.nodeHeaderUrl"><div class="ng-scope">
+    <div class="col-sm-6 text-left">Name</div>
+    <div class="col-sm-3 text-right">Another Cell</div>
+    <div class="col-sm-3 text-right">Price Range</div>
+</div></div></div></div></div><!-- end ngIf: attrs.nodeHeaderUrl --><!-- ngRepeat: item in treeRoot[attrs.childNode] --><div class="tree-level tree-top-level border ng-scope" ng-init="level = 1" ng-repeat="item in treeRoot[attrs.childNode]"><ad-tree-browser-node template-url="attrs.nodeTemplateUrl" class="ng-scope"><div class="content ng-scope" ng-style="{&#39;padding-left&#39;: level * (attrs.childrenPadding || 15) + &#39;px&#39;}" ng-click="onRowClick(item, level, $event)" ng-class="{added:item._selected}" style="padding-left: 0px;"><div class="content-holder"><!-- ngIf: !attrs.customToggle --><div class="node-content"><div>
+    <div class="col-sm-6 text-left ng-binding" ng-style="{&#39;padding-left&#39;: level * 15 + &#39;px&#39;}" style="padding-left: 15px;">
+        <div class="toggle ng-scope custom-toggle" ng-class="{&#39;custom-toggle&#39;: attrs.customToggle}"><!-- ngIf: !item._ad_expanded && hasChildren(item) && !item._ad_loading --><i ng-if="!item._ad_expanded &amp;&amp; hasChildren(item) &amp;&amp; !item._ad_loading" ng-class="iconClasses.expand" ng-click="toggle($event,item)" class="ng-scope glyphicon glyphicon-plus-sign"></i><!-- end ngIf: !item._ad_expanded && hasChildren(item) && !item._ad_loading --> <!-- ngIf: item._ad_expanded && !item._ad_loading --> <!-- ngIf: item._ad_loading --></div>Bmw
+    </div>
+    <div class="col-sm-3 text-right">Another Cell</div>
+    <div class="col-sm-3 text-right">
+      <a href="" ng-click="carSelected(item)" class="ng-binding">
+        30k to 200k
+      </a>
+    </div>
+</div> <!-- ngIf: !attrs.nodeTemplateUrl --></div></div></div><!-- ngIf: item._ad_expanded --></ad-tree-browser-node></div><!-- end ngRepeat: item in treeRoot[attrs.childNode] --><div class="tree-level tree-top-level border ng-scope" ng-init="level = 1" ng-repeat="item in treeRoot[attrs.childNode]"><ad-tree-browser-node template-url="attrs.nodeTemplateUrl" class="ng-scope"><div class="content ng-scope" ng-style="{&#39;padding-left&#39;: level * (attrs.childrenPadding || 15) + &#39;px&#39;}" ng-click="onRowClick(item, level, $event)" ng-class="{added:item._selected}" style="padding-left: 0px;"><div class="content-holder"><!-- ngIf: !attrs.customToggle --><div class="node-content"><div>
+    <div class="col-sm-6 text-left ng-binding" ng-style="{&#39;padding-left&#39;: level * 15 + &#39;px&#39;}" style="padding-left: 15px;">
+        <div class="toggle ng-scope custom-toggle" ng-class="{&#39;custom-toggle&#39;: attrs.customToggle}"><!-- ngIf: !item._ad_expanded && hasChildren(item) && !item._ad_loading --><i ng-if="!item._ad_expanded &amp;&amp; hasChildren(item) &amp;&amp; !item._ad_loading" ng-class="iconClasses.expand" ng-click="toggle($event,item)" class="ng-scope glyphicon glyphicon-plus-sign"></i><!-- end ngIf: !item._ad_expanded && hasChildren(item) && !item._ad_loading --> <!-- ngIf: item._ad_expanded && !item._ad_loading --> <!-- ngIf: item._ad_loading --></div>Audi
+    </div>
+    <div class="col-sm-3 text-right">Another Cell</div>
+    <div class="col-sm-3 text-right">
+      <a href="" ng-click="carSelected(item)" class="ng-binding">
+        30k to 200k
+      </a>
+    </div>
+</div> <!-- ngIf: !attrs.nodeTemplateUrl --></div></div></div><!-- ngIf: item._ad_expanded --></ad-tree-browser-node></div><!-- end ngRepeat: item in treeRoot[attrs.childNode] --><div class="tree-level tree-top-level border ng-scope" ng-init="level = 1" ng-repeat="item in treeRoot[attrs.childNode]"><ad-tree-browser-node template-url="attrs.nodeTemplateUrl" class="ng-scope"><div class="content ng-scope" ng-style="{&#39;padding-left&#39;: level * (attrs.childrenPadding || 15) + &#39;px&#39;}" ng-click="onRowClick(item, level, $event)" ng-class="{added:item._selected}" style="padding-left: 0px;"><div class="content-holder"><!-- ngIf: !attrs.customToggle --><div class="node-content"><div>
+    <div class="col-sm-6 text-left ng-binding" ng-style="{&#39;padding-left&#39;: level * 15 + &#39;px&#39;}" style="padding-left: 15px;">
+        <div class="toggle ng-scope custom-toggle" ng-class="{&#39;custom-toggle&#39;: attrs.customToggle}"><!-- ngIf: !item._ad_expanded && hasChildren(item) && !item._ad_loading --><i ng-if="!item._ad_expanded &amp;&amp; hasChildren(item) &amp;&amp; !item._ad_loading" ng-class="iconClasses.expand" ng-click="toggle($event,item)" class="ng-scope glyphicon glyphicon-plus-sign"></i><!-- end ngIf: !item._ad_expanded && hasChildren(item) && !item._ad_loading --> <!-- ngIf: item._ad_expanded && !item._ad_loading --> <!-- ngIf: item._ad_loading --></div>Honda
+    </div>
+    <div class="col-sm-3 text-right">Another Cell</div>
+    <div class="col-sm-3 text-right">
+      <a href="" ng-click="carSelected(item)" class="ng-binding">
+        15k to 50k
+      </a>
+    </div>
+</div> <!-- ngIf: !attrs.nodeTemplateUrl --></div></div></div><!-- ngIf: item._ad_expanded --></ad-tree-browser-node></div><!-- end ngRepeat: item in treeRoot[attrs.childNode] --></div></div></div></div></ad-tree-browser>
+  <!-- ad_example_end -->
+  <hr>
+  <p>Simple tree without border</p>
+  <!-- ad_example_start -->
+  <!-- ===== Usage Simple ===== -->
+  <ad-tree-browser class="ad-border-default ng-scope" tree-name="treeDemo" row-ng-class="{added:item._selected}" tree-root="root" child-node="children" children-padding="15" node-template-url="src/treebrowser/docs/treeNode.html"><div class="ad-tree-browser-container" ng-class="{&#39;tree-bordered&#39;: attrs.bordered}"><div data-level="0" class="tree-view"><div class="tree"><div><!-- ngIf: attrs.nodeHeaderUrl --><!-- ngRepeat: item in treeRoot[attrs.childNode] --><div class="tree-level tree-top-level border ng-scope" ng-init="level = 1" ng-repeat="item in treeRoot[attrs.childNode]"><ad-tree-browser-node template-url="attrs.nodeTemplateUrl" class="ng-scope"><div class="content ng-scope" ng-style="{&#39;padding-left&#39;: level * (attrs.childrenPadding || 15) + &#39;px&#39;}" ng-click="onRowClick(item, level, $event)" ng-class="{added:item._selected}" style="padding-left: 15px;"><div class="content-holder"><!-- ngIf: !attrs.customToggle --><div class="toggle" ng-class="{&#39;custom-toggle&#39;: attrs.customToggle}" ng-if="!attrs.customToggle"><!-- ngIf: !item._ad_expanded && hasChildren(item) && !item._ad_loading --><i ng-if="!item._ad_expanded &amp;&amp; hasChildren(item) &amp;&amp; !item._ad_loading" ng-class="iconClasses.expand" ng-click="toggle($event,item)" class="ng-scope glyphicon glyphicon-plus-sign"></i><!-- end ngIf: !item._ad_expanded && hasChildren(item) && !item._ad_loading --> <!-- ngIf: item._ad_expanded && !item._ad_loading --> <!-- ngIf: item._ad_loading --></div><!-- end ngIf: !attrs.customToggle --><div class="node-content"><div>
+    <div class="col-sm-6 text-left ng-binding">
+        Bmw
+    </div>
+    <div class="col-sm-3 text-right">Another Cell</div>
+    <div class="col-sm-3 text-right">
+      <a href="" ng-click="carSelected(item)" class="ng-binding">
+        30k to 200k
+      </a>
+    </div>
+</div> <!-- ngIf: !attrs.nodeTemplateUrl --></div></div></div><!-- ngIf: item._ad_expanded --></ad-tree-browser-node></div><!-- end ngRepeat: item in treeRoot[attrs.childNode] --><div class="tree-level tree-top-level border ng-scope" ng-init="level = 1" ng-repeat="item in treeRoot[attrs.childNode]"><ad-tree-browser-node template-url="attrs.nodeTemplateUrl" class="ng-scope"><div class="content ng-scope" ng-style="{&#39;padding-left&#39;: level * (attrs.childrenPadding || 15) + &#39;px&#39;}" ng-click="onRowClick(item, level, $event)" ng-class="{added:item._selected}" style="padding-left: 15px;"><div class="content-holder"><!-- ngIf: !attrs.customToggle --><div class="toggle" ng-class="{&#39;custom-toggle&#39;: attrs.customToggle}" ng-if="!attrs.customToggle"><!-- ngIf: !item._ad_expanded && hasChildren(item) && !item._ad_loading --><i ng-if="!item._ad_expanded &amp;&amp; hasChildren(item) &amp;&amp; !item._ad_loading" ng-class="iconClasses.expand" ng-click="toggle($event,item)" class="ng-scope glyphicon glyphicon-plus-sign"></i><!-- end ngIf: !item._ad_expanded && hasChildren(item) && !item._ad_loading --> <!-- ngIf: item._ad_expanded && !item._ad_loading --> <!-- ngIf: item._ad_loading --></div><!-- end ngIf: !attrs.customToggle --><div class="node-content"><div>
+    <div class="col-sm-6 text-left ng-binding">
+        Audi
+    </div>
+    <div class="col-sm-3 text-right">Another Cell</div>
+    <div class="col-sm-3 text-right">
+      <a href="" ng-click="carSelected(item)" class="ng-binding">
+        30k to 200k
+      </a>
+    </div>
+</div> <!-- ngIf: !attrs.nodeTemplateUrl --></div></div></div><!-- ngIf: item._ad_expanded --></ad-tree-browser-node></div><!-- end ngRepeat: item in treeRoot[attrs.childNode] --><div class="tree-level tree-top-level border ng-scope" ng-init="level = 1" ng-repeat="item in treeRoot[attrs.childNode]"><ad-tree-browser-node template-url="attrs.nodeTemplateUrl" class="ng-scope"><div class="content ng-scope" ng-style="{&#39;padding-left&#39;: level * (attrs.childrenPadding || 15) + &#39;px&#39;}" ng-click="onRowClick(item, level, $event)" ng-class="{added:item._selected}" style="padding-left: 15px;"><div class="content-holder"><!-- ngIf: !attrs.customToggle --><div class="toggle" ng-class="{&#39;custom-toggle&#39;: attrs.customToggle}" ng-if="!attrs.customToggle"><!-- ngIf: !item._ad_expanded && hasChildren(item) && !item._ad_loading --><i ng-if="!item._ad_expanded &amp;&amp; hasChildren(item) &amp;&amp; !item._ad_loading" ng-class="iconClasses.expand" ng-click="toggle($event,item)" class="ng-scope glyphicon glyphicon-plus-sign"></i><!-- end ngIf: !item._ad_expanded && hasChildren(item) && !item._ad_loading --> <!-- ngIf: item._ad_expanded && !item._ad_loading --> <!-- ngIf: item._ad_loading --></div><!-- end ngIf: !attrs.customToggle --><div class="node-content"><div>
+    <div class="col-sm-6 text-left ng-binding">
+        Honda
+    </div>
+    <div class="col-sm-3 text-right">Another Cell</div>
+    <div class="col-sm-3 text-right">
+      <a href="" ng-click="carSelected(item)" class="ng-binding">
+        15k to 50k
+      </a>
+    </div>
+</div> <!-- ngIf: !attrs.nodeTemplateUrl --></div></div></div><!-- ngIf: item._ad_expanded --></ad-tree-browser-node></div><!-- end ngRepeat: item in treeRoot[attrs.childNode] --></div></div></div></div></ad-tree-browser>
+  <!-- ad_example_end -->
+</div></ng-include>
+                </div>
+            </div>
+            <div>
+                <div>
+                  <span class="btn btn-link btn-lg" ng-click="module.showOptions = !module.showOptions">
+                    <i class="fa fa-plus" ng-hide="module.showOptions"></i>
+                    <i class="fa fa-minus ng-hide" ng-show="module.showOptions"></i>
+                    Options
+                  </span>
+                </div>
+                <!-- ngIf: module.showOptions -->
+            </div>
+            <div>
+              <div>
+                 <span class="btn btn-link btn-lg" ng-click="module.showMoreInfo = !module.showMoreInfo">
+                   <i class="fa fa-plus" ng-hide="module.showMoreInfo"></i>
+                   <i class="fa fa-minus ng-hide" ng-show="module.showMoreInfo"></i>
+                   More Info
+                 </span>
+              </div>
+              <!-- ngIf: module.showMoreInfo -->
+            </div>
+        </div>
+    </div><!-- end ngRepeat: module in modules --><div class="module-section ng-scope" ng-repeat="module in modules" id="draggable">
+        <h3 class="ng-binding">Drag and drop</h3>
+        <p class="text-muted ng-binding">- simple directives to enable drag and drop functionalities</p>
+        <div ng-controller="treebrowserCtrl" class="ng-scope">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <h4 class="text-danger">Code</h4>
+                    <code-navigator files="module.docFiles" base-path="src/draggable/docs/" class="ng-isolate-scope"><div class="code-navigator">
+    <div>
+        <ul class="nav nav-tabs" role="tablist">
+            <!-- ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope active">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">draggable.view.html</a>
+            </li><!-- end ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">draggable.ctrl.js</a>
+            </li><!-- end ngRepeat: file in files -->
+        </ul>
+    </div>
+    <div>
+        <markdown src="src/draggable/docs/draggable.view.html"><pre><code class=" hljs xml">        <span class="hljs-comment">&lt;!-- ========== Usage Drag ========== --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"list-group-item"</span>
+            <span class="hljs-attribute">ad-drag</span>=<span class="hljs-value">"true"</span>
+            <span class="hljs-attribute">ad-drag-data</span>=<span class="hljs-value">"car"</span>
+            <span class="hljs-attribute">ad-drag-begin</span>=<span class="hljs-value">"onDragStart($data, $dragElement, $event);"</span>
+            <span class="hljs-attribute">ad-drag-end</span>=<span class="hljs-value">"onDragEnd($data, $dragElement, $lastDropElement, $event);"</span>
+            <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">"car in models.cars"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"glyphicon glyphicon-th"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            {{ car.name }} - {{ car.modelYear }} ( {{ car.price | currency }} )
+          <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+      <span class="hljs-comment">&lt;!-- ========== Usage Drop ========== --&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"my-basket"</span>
+          <span class="hljs-attribute">class</span>=<span class="hljs-value">"list-group"</span>
+          <span class="hljs-attribute">ad-drop</span>=<span class="hljs-value">"true"</span>
+          <span class="hljs-attribute">ad-drop-over</span>=<span class="hljs-value">"onDragOver($data, $dragElement, $dropElement, $event);"</span>
+          <span class="hljs-attribute">ad-drop-leave</span>=<span class="hljs-value">"onDragLeave($data, $dragElement, $dropElement, $event)"</span>
+          <span class="hljs-attribute">ad-drop-end</span>=<span class="hljs-value">"onDrop($data, $dragElement, $dropElement, $event);"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"list-group-item disabled"</span>&gt;</span>My Basket<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"list-group-item"</span>
+            <span class="hljs-attribute">ad-drag</span>=<span class="hljs-value">"true"</span>
+            <span class="hljs-attribute">ng-repeat</span>=<span class="hljs-value">"car in models.basket"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"glyphicon glyphicon-thumbs-up"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+            {{ car.name }} - {{ car.modelYear }} ( {{ car.price | currency }} )
+          <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"list-group-item"</span> <span class="hljs-attribute">ng-hide</span>=<span class="hljs-value">"models.basket.length"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span> Drop here<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"list-group"</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- =========== Drag with handles ============= --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"list-group-item"</span>
+            <span class="hljs-attribute">ad-drag</span>=<span class="hljs-value">"true"</span>
+            <span class="hljs-attribute">ad-drag-handle</span>=<span class="hljs-value">"true"</span>
+            <span class="hljs-attribute">id</span>=<span class="hljs-value">"drag-handle-demo"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ad-drag-handle glyphicon glyphicon-align-justify"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+          Drag me using my handle
+        <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- =========== Drag on the whole element ============= --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"list-group-item"</span>
+            <span class="hljs-attribute">ad-drag</span>=<span class="hljs-value">"true"</span>
+            <span class="hljs-attribute">id</span>=<span class="hljs-value">"drag-element-demo"</span>&gt;</span>
+          Drag me without handle
+        <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- =========== Prevent drag on parts of the element ============= --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"list-group-item"</span>
+            <span class="hljs-attribute">ad-drag</span>=<span class="hljs-value">"true"</span>
+            <span class="hljs-attribute">id</span>=<span class="hljs-value">"drag-prevent-demo"</span>&gt;</span>
+          Drag me, except <span class="hljs-tag">&lt;<span class="hljs-title">strong</span> <span class="hljs-attribute">ad-prevent-drag</span>&gt;</span>this bold text<span class="hljs-tag">&lt;/<span class="hljs-title">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+</code></pre></markdown>
+    </div>
+</div></code-navigator>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <h4 class="text-primary">
+                      Demo
+                      <!-- ngIf: module.playGroundUrl --><a class="btn btn-link btn-sm ng-scope" target="_blank" ng-if="module.playGroundUrl" ng-href="http://jsfiddle.net/kashjs/n2gxobf7/" href="http://jsfiddle.net/kashjs/n2gxobf7/">
+                        <i class="glyphicon glyphicon-edit"></i> jsFiddle
+                      </a><!-- end ngIf: module.playGroundUrl -->
+                    </h4>
+                    <!-- ngInclude: undefined --><ng-include src="&#39;src/&#39; + module.moduleName + &#39;/docs/&#39; + module.moduleName + &#39;.view.html&#39;" class="ng-scope"><div ng-controller="draggableCtrl" class="ng-scope">
+  <p>( Drag car from the <strong>list of cars</strong> to the <strong>basket</strong>. )</p>
+  <div class="rows">
+    <div class="col-md-3">
+      <ul id="car-list" class="list-group">
+        <li class="list-group-item active">List of Cars</li>
+        <!-- ad_example_start -->
+        <!-- ========== Usage Drag ========== -->
+        <!-- ngRepeat: car in models.cars --><li class="list-group-item ng-scope ad-draggable" ad-drag="true" ad-drag-data="car" ad-drag-begin="onDragStart($data, $dragElement, $event);" ad-drag-end="onDragEnd($data, $dragElement, $lastDropElement, $event);" ng-repeat="car in models.cars" draggable="false">
+          <span class="ng-binding">
+            <span class="glyphicon glyphicon-th"></span>
+            Audi A4 - 2009 ( $34,000.00 )
+          </span>
+        </li><!-- end ngRepeat: car in models.cars --><li class="list-group-item ng-scope ad-draggable" ad-drag="true" ad-drag-data="car" ad-drag-begin="onDragStart($data, $dragElement, $event);" ad-drag-end="onDragEnd($data, $dragElement, $lastDropElement, $event);" ng-repeat="car in models.cars" draggable="false">
+          <span class="ng-binding">
+            <span class="glyphicon glyphicon-th"></span>
+            BMW 328i - 2012 ( $39,000.00 )
+          </span>
+        </li><!-- end ngRepeat: car in models.cars --><li class="list-group-item ng-scope ad-draggable" ad-drag="true" ad-drag-data="car" ad-drag-begin="onDragStart($data, $dragElement, $event);" ad-drag-end="onDragEnd($data, $dragElement, $lastDropElement, $event);" ng-repeat="car in models.cars" draggable="false">
+          <span class="ng-binding">
+            <span class="glyphicon glyphicon-th"></span>
+            Audi A6 - 2012 ( $44,000.00 )
+          </span>
+        </li><!-- end ngRepeat: car in models.cars --><li class="list-group-item ng-scope ad-draggable" ad-drag="true" ad-drag-data="car" ad-drag-begin="onDragStart($data, $dragElement, $event);" ad-drag-end="onDragEnd($data, $dragElement, $lastDropElement, $event);" ng-repeat="car in models.cars" draggable="false">
+          <span class="ng-binding">
+            <span class="glyphicon glyphicon-th"></span>
+            Audi S8 - 2014 ( $100,000.00 )
+          </span>
+        </li><!-- end ngRepeat: car in models.cars --><li class="list-group-item ng-scope ad-draggable" ad-drag="true" ad-drag-data="car" ad-drag-begin="onDragStart($data, $dragElement, $event);" ad-drag-end="onDragEnd($data, $dragElement, $lastDropElement, $event);" ng-repeat="car in models.cars" draggable="false">
+          <span class="ng-binding">
+            <span class="glyphicon glyphicon-th"></span>
+            Audi A4 - 2009 ( $34,000.00 )
+          </span>
+        </li><!-- end ngRepeat: car in models.cars -->
+      </ul>
+      <!-- ad_example_end -->
+    </div>
+    <div class="col-md-4">
+      <!-- ad_example_start -->
+      <!-- ========== Usage Drop ========== -->
+      <ul id="my-basket" class="list-group" ad-drop="true" ad-drop-over="onDragOver($data, $dragElement, $dropElement, $event);" ad-drop-leave="onDragLeave($data, $dragElement, $dropElement, $event)" ad-drop-end="onDrop($data, $dragElement, $dropElement, $event);">
+        <li class="list-group-item disabled">My Basket</li>
+        <!-- ngRepeat: car in models.basket -->
+        <li class="list-group-item" ng-hide="models.basket.length">
+            <span> Drop here</span>
+        </li>
+      </ul>
+      <!-- ad_example_end -->
+    </div>
+    <div class="col-md-3">
+      <!-- ad_example_start -->
+      <ul class="list-group">
+        <!-- =========== Drag with handles ============= -->
+        <li class="list-group-item" ad-drag="true" ad-drag-handle="true" id="drag-handle-demo" draggable="false">
+          <span class="ad-drag-handle glyphicon glyphicon-align-justify"></span>
+          Drag me using my handle
+        </li>
+        <!-- =========== Drag on the whole element ============= -->
+        <li class="list-group-item ad-draggable" ad-drag="true" id="drag-element-demo" draggable="false">
+          Drag me without handle
+        </li>
+        <!-- =========== Prevent drag on parts of the element ============= -->
+        <li class="list-group-item ad-draggable" ad-drag="true" id="drag-prevent-demo" draggable="false">
+          Drag me, except <strong ad-prevent-drag="">this bold text</strong></li>
+        
+      </ul>
+      <!-- ad_example_end -->
+    </div>
+  </div>
+</div>
+</ng-include>
+                </div>
+            </div>
+            <div>
+                <div>
+                  <span class="btn btn-link btn-lg" ng-click="module.showOptions = !module.showOptions">
+                    <i class="fa fa-plus" ng-hide="module.showOptions"></i>
+                    <i class="fa fa-minus ng-hide" ng-show="module.showOptions"></i>
+                    Options
+                  </span>
+                </div>
+                <!-- ngIf: module.showOptions -->
+            </div>
+            <div>
+              <div>
+                 <span class="btn btn-link btn-lg" ng-click="module.showMoreInfo = !module.showMoreInfo">
+                   <i class="fa fa-plus" ng-hide="module.showMoreInfo"></i>
+                   <i class="fa fa-minus ng-hide" ng-show="module.showMoreInfo"></i>
+                   More Info
+                 </span>
+              </div>
+              <!-- ngIf: module.showMoreInfo -->
+            </div>
+        </div>
+    </div><!-- end ngRepeat: module in modules --><div class="module-section ng-scope" ng-repeat="module in modules" id="infinitedropdown">
+        <h3 class="ng-binding">Infinite Dropdowns</h3>
+        <p class="text-muted ng-binding">- simple directives to implement infinite scroll dropdowns/multi selectors</p>
+        <div ng-controller="treebrowserCtrl" class="ng-scope">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <h4 class="text-danger">Code</h4>
+                    <code-navigator files="module.docFiles" base-path="src/infinitedropdown/docs/" class="ng-isolate-scope"><div class="code-navigator">
+    <div>
+        <ul class="nav nav-tabs" role="tablist">
+            <!-- ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope active">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">infinitedropdown.view.html</a>
+            </li><!-- end ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">infinitedropdown.ctrl.js</a>
+            </li><!-- end ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">artist.html</a>
+            </li><!-- end ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">customSearch.html</a>
+            </li><!-- end ngRepeat: file in files -->
+        </ul>
+    </div>
+    <div>
+        <markdown src="src/infinitedropdown/docs/infinitedropdown.view.html"><pre><code class=" hljs xml">            <span class="hljs-comment">&lt;!-- ========== Usage Multi Select ========== --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">ad-infinite-dropdown</span> <span class="hljs-attribute">dropdown-name</span>=<span class="hljs-value">"artistsList"</span>
+                              <span class="hljs-attribute">display-property</span>=<span class="hljs-value">"name"</span>
+                              <span class="hljs-attribute">initial-label</span>=<span class="hljs-value">"Select an artist"</span>
+                              <span class="hljs-attribute">selected-items</span>=<span class="hljs-value">"selectedArtists"</span>
+                              <span class="hljs-attribute">max-height</span>=<span class="hljs-value">"150px"</span>
+                              <span class="hljs-attribute">max-width</span>=<span class="hljs-value">"200px"</span>
+                              <span class="hljs-attribute">dropdown-status</span>=<span class="hljs-value">"dropdownStatus"</span>
+                              <span class="hljs-attribute">dropdown-header-template-url</span>=<span class="hljs-value">"src/infinitedropdown/docs/customSearch.html"</span>
+                              <span class="hljs-attribute">on-data-loaded</span>=<span class="hljs-value">"dlc($success, $response)"</span>
+                              <span class="hljs-attribute">ajax-config</span>=<span class="hljs-value">"artistsAjaxConfig"</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">ad-infinite-dropdown</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Selected Items:<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>
+                {{ selectedArtists }}
+            <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+
+            <span class="hljs-comment">&lt;!-- ========== Usage Single Select ========== --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">ad-infinite-dropdown</span> <span class="hljs-attribute">dropdown-name</span>=<span class="hljs-value">"artistList"</span>
+                                  <span class="hljs-attribute">template-url</span>=<span class="hljs-value">"src/infinitedropdown/docs/artist.html"</span>
+                                  <span class="hljs-attribute">initial-label</span>=<span class="hljs-value">"Select an artist"</span>
+                                  <span class="hljs-attribute">label-display-property</span>=<span class="hljs-value">"name"</span>
+                                  <span class="hljs-attribute">selected-items</span>=<span class="hljs-value">"selectedArtist"</span>
+                                  <span class="hljs-attribute">single-selection-mode</span>=<span class="hljs-value">"true"</span>
+                                  <span class="hljs-attribute">on-item-click</span>=<span class="hljs-value">"artistClicked"</span>
+                                  <span class="hljs-attribute">max-width</span>=<span class="hljs-value">"230px"</span>
+                                  <span class="hljs-attribute">btn-classes</span>=<span class="hljs-value">"btn btn-primary btn-xs"</span>
+                                  <span class="hljs-attribute">ajax-config</span>=<span class="hljs-value">"artistsAjaxConfig"</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">ad-infinite-dropdown</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Selected Items:<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>
+                {{ selectedArtist }}
+            <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+
+            <span class="hljs-comment">&lt;!-- ========== Usage Local Data Source ========== --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">ad-infinite-dropdown</span> <span class="hljs-attribute">dropdown-name</span>=<span class="hljs-value">"artistListLocal"</span>
+                                  <span class="hljs-attribute">template</span>=<span class="hljs-value">"artistListTemplate"</span>
+                                  <span class="hljs-attribute">initial-label</span>=<span class="hljs-value">"Select an artist"</span>
+                                  <span class="hljs-attribute">selected-items</span>=<span class="hljs-value">"localSelectedArtists"</span>
+                                  <span class="hljs-attribute">single-selection-mode</span>=<span class="hljs-value">"false"</span>
+                                  <span class="hljs-attribute">max-height</span>=<span class="hljs-value">"200px"</span>
+                                  <span class="hljs-attribute">local-data-source</span>=<span class="hljs-value">"localArtistsData"</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">ad-infinite-dropdown</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Selected Items:<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>
+                {{ localSelectedArtists }}
+            <span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+</code></pre></markdown>
+    </div>
+</div></code-navigator>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <h4 class="text-primary">
+                      Demo
+                      <!-- ngIf: module.playGroundUrl --><a class="btn btn-link btn-sm ng-scope" target="_blank" ng-if="module.playGroundUrl" ng-href="http://jsfiddle.net/kashjs/2n7znx2u/" href="http://jsfiddle.net/kashjs/2n7znx2u/">
+                        <i class="glyphicon glyphicon-edit"></i> jsFiddle
+                      </a><!-- end ngIf: module.playGroundUrl -->
+                    </h4>
+                    <!-- ngInclude: undefined --><ng-include src="&#39;src/&#39; + module.moduleName + &#39;/docs/&#39; + module.moduleName + &#39;.view.html&#39;" class="ng-scope"><div ng-controller="infiniteDropdownCtrl" class="ng-scope">
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h4 class="text-muted">Multi Selection Mode</h4>
+            <!-- ad_example_start -->
+            <!-- ========== Usage Multi Select ========== -->
+            <ad-infinite-dropdown dropdown-name="artistsList" display-property="name" initial-label="Select an artist" selected-items="selectedArtists" max-height="150px" max-width="200px" dropdown-status="dropdownStatus" dropdown-header-template-url="src/infinitedropdown/docs/customSearch.html" on-data-loaded="dlc($success, $response)" ajax-config="artistsAjaxConfig" class="ng-scope"><div class="ad-infinite-list-container"><div class="dropdown"><button type="button" class="dropdown-toggle btn btn-default" ng-class="attrs.btnClasses || &#39;btn btn-default&#39;" data-toggle="dropdown"><!-- ngIf: !attrs.labelDisplayProperty || !selectedItems.length --><span ng-if="!attrs.labelDisplayProperty || !selectedItems.length" class="ng-binding ng-scope">Select an artist</span><!-- end ngIf: !attrs.labelDisplayProperty || !selectedItems.length --> <!-- ngIf: attrs.labelDisplayProperty && selectedItems.length --> <span class="caret"></span></button><!-- ngIf: attrs.dropdownHeaderTemplateUrl --><div class="dropdown-header ng-scope ng-hide" ng-show="dropdownStatus.open" ng-click="dropdownHeaderAreaClicked($event)" ng-if="attrs.dropdownHeaderTemplateUrl"><!-- ngInclude: undefined --><ng-include src="attrs.dropdownHeaderTemplateUrl" class="ng-scope"><div ng-click="searchHeaderClicked($event)" class="ng-scope">
+    <input type="text" placeholder="search" ng-model="artistsAjaxConfig.params.artist" class="ng-pristine ng-untouched ng-valid"><br>
+    <a href="" ng-click="deselectAllArtists()" ng-show="selectedArtists.length" class="ng-binding ng-hide">Deselect All (0)</a>
+</div>
+</ng-include></div><!-- end ngIf: attrs.dropdownHeaderTemplateUrl --><ul class="dropdown-menu with-dropdown-header" role="menu" ng-class="{&#39;with-dropdown-header&#39;: attrs.dropdownHeaderTemplateUrl}" ng-style="localConfig.dimensions" style="max-height: 150px; max-width: 200px;"><!-- ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --><span ng-if="attrs.displayProperty" class="ng-binding ng-scope">50 Cent</span><!-- end ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --><span ng-if="attrs.displayProperty" class="ng-binding ng-scope">50 Cent Feat. Justin Timberlake</span><!-- end ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --><span ng-if="attrs.displayProperty" class="ng-binding ng-scope">Jeremih feat. 50 Cent</span><!-- end ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --><span ng-if="attrs.displayProperty" class="ng-binding ng-scope">50 Cent, Eminem, Ca$his &amp; Lloyd Banks</span><!-- end ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --><span ng-if="attrs.displayProperty" class="ng-binding ng-scope">50 Cent F. Justin Timberlake and Timbaland</span><!-- end ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --><span ng-if="attrs.displayProperty" class="ng-binding ng-scope">50 Cent feat. Justin Timberlake &amp; Timbaland</span><!-- end ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --><span ng-if="attrs.displayProperty" class="ng-binding ng-scope">Mann Feat. 50 Cent</span><!-- end ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --><span ng-if="attrs.displayProperty" class="ng-binding ng-scope">50 Cent feat. Mobb Deep</span><!-- end ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --><span ng-if="attrs.displayProperty" class="ng-binding ng-scope">50 Cent &amp; G-Unit</span><!-- end ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --><span ng-if="attrs.displayProperty" class="ng-binding ng-scope">50 Cent ft Justin Timberlake</span><!-- end ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow text-center ng-hide" ng-show="localConfig.loadingData"><a role="menuitem" tabindex="-1" href=""><ad-loading-icon><i class="glyphicon glyphicon-refresh ad-spin ng-scope"></i></ad-loading-icon></a></li></ul></div></div></ad-infinite-dropdown>
+            <p>Selected Items:</p>
+            <span class="ng-binding">
+                []
+            </span>
+            <!-- ad_example_end -->
+            <h4 class="text-muted">Single Selection Mode</h4>
+            <!-- ad_example_start -->
+            <!-- ========== Usage Single Select ========== -->
+            <ad-infinite-dropdown dropdown-name="artistList" template-url="src/infinitedropdown/docs/artist.html" initial-label="Select an artist" label-display-property="name" selected-items="selectedArtist" single-selection-mode="true" on-item-click="artistClicked" max-width="230px" btn-classes="btn btn-primary btn-xs" ajax-config="artistsAjaxConfig" class="ng-scope"><div class="ad-infinite-list-container"><div class="dropdown"><button type="button" class="dropdown-toggle btn btn-primary btn-xs" ng-class="attrs.btnClasses || &#39;btn btn-default&#39;" data-toggle="dropdown"><!-- ngIf: !attrs.labelDisplayProperty || !selectedItems.length --><span ng-if="!attrs.labelDisplayProperty || !selectedItems.length" class="ng-binding ng-scope">Select an artist</span><!-- end ngIf: !attrs.labelDisplayProperty || !selectedItems.length --> <!-- ngIf: attrs.labelDisplayProperty && selectedItems.length --> <span class="caret"></span></button><!-- ngIf: attrs.dropdownHeaderTemplateUrl --><ul class="dropdown-menu" role="menu" ng-class="{&#39;with-dropdown-header&#39;: attrs.dropdownHeaderTemplateUrl}" ng-style="localConfig.dimensions" style="max-height: 200px; max-width: 230px;"><!-- ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --><!-- ngInclude: attrs.templateUrl --><span ng-if="attrs.templateUrl" ng-include="attrs.templateUrl" class="ng-scope"><span class="ng-scope">
+    <img ng-src="http://img2-ak.lst.fm/i/u/34s/136cfeba28de4e9c81906aa54b133daa.png" src="./adapt-strap_files/136cfeba28de4e9c81906aa54b133daa(1).png">
+    &nbsp;<strong class="ng-binding">50 Cent</strong>
+</span>
+</span><!-- end ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --><!-- ngInclude: attrs.templateUrl --><span ng-if="attrs.templateUrl" ng-include="attrs.templateUrl" class="ng-scope"><span class="ng-scope">
+    <img ng-src="http://img2-ak.lst.fm/i/u/34s/5e0380d2059a40e5857caa2b1566be83.png" src="./adapt-strap_files/5e0380d2059a40e5857caa2b1566be83(1).png">
+    &nbsp;<strong class="ng-binding">50 Cent Feat. Justin Timberlake</strong>
+</span>
+</span><!-- end ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --><!-- ngInclude: attrs.templateUrl --><span ng-if="attrs.templateUrl" ng-include="attrs.templateUrl" class="ng-scope"><span class="ng-scope">
+    <img ng-src="http://img2-ak.lst.fm/i/u/34s/efdfb0cf58874ec1854dcf5418ed6d0d.png" src="./adapt-strap_files/efdfb0cf58874ec1854dcf5418ed6d0d(1).png">
+    &nbsp;<strong class="ng-binding">Jeremih feat. 50 Cent</strong>
+</span>
+</span><!-- end ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --><!-- ngInclude: attrs.templateUrl --><span ng-if="attrs.templateUrl" ng-include="attrs.templateUrl" class="ng-scope"><span class="ng-scope">
+    <img ng-src="http://img2-ak.lst.fm/i/u/34s/d5cd990c7e1a4ab29e3b0fe523f7a6d9.png" src="./adapt-strap_files/d5cd990c7e1a4ab29e3b0fe523f7a6d9(1).png">
+    &nbsp;<strong class="ng-binding">50 Cent, Eminem, Ca$his &amp; Lloyd Banks</strong>
+</span>
+</span><!-- end ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --><!-- ngInclude: attrs.templateUrl --><span ng-if="attrs.templateUrl" ng-include="attrs.templateUrl" class="ng-scope"><span class="ng-scope">
+    <img ng-src="http://img2-ak.lst.fm/i/u/34s/af4fc72610fc4cd7954c676d62bc135b.png" src="./adapt-strap_files/af4fc72610fc4cd7954c676d62bc135b(1).png">
+    &nbsp;<strong class="ng-binding">50 Cent F. Justin Timberlake and Timbaland</strong>
+</span>
+</span><!-- end ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --><!-- ngInclude: attrs.templateUrl --><span ng-if="attrs.templateUrl" ng-include="attrs.templateUrl" class="ng-scope"><span class="ng-scope">
+    <img ng-src="http://img2-ak.lst.fm/i/u/34s/885c0a724d2340828514943db848c0e4.png" src="./adapt-strap_files/885c0a724d2340828514943db848c0e4.png">
+    &nbsp;<strong class="ng-binding">50 Cent feat. Justin Timberlake &amp; Timbaland</strong>
+</span>
+</span><!-- end ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --><!-- ngInclude: attrs.templateUrl --><span ng-if="attrs.templateUrl" ng-include="attrs.templateUrl" class="ng-scope"><span class="ng-scope">
+    <img ng-src="http://img2-ak.lst.fm/i/u/34s/6cec8a7f2e954d2ab20ba9f097d506cc.png" src="./adapt-strap_files/6cec8a7f2e954d2ab20ba9f097d506cc.png">
+    &nbsp;<strong class="ng-binding">Mann Feat. 50 Cent</strong>
+</span>
+</span><!-- end ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --><!-- ngInclude: attrs.templateUrl --><span ng-if="attrs.templateUrl" ng-include="attrs.templateUrl" class="ng-scope"><span class="ng-scope">
+    <img ng-src="http://img2-ak.lst.fm/i/u/34s/9c3b6acd53ff42798238e26611763367.png" src="./adapt-strap_files/9c3b6acd53ff42798238e26611763367.png">
+    &nbsp;<strong class="ng-binding">50 Cent feat. Mobb Deep</strong>
+</span>
+</span><!-- end ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --><!-- ngInclude: attrs.templateUrl --><span ng-if="attrs.templateUrl" ng-include="attrs.templateUrl" class="ng-scope"><span class="ng-scope">
+    <img ng-src="http://img2-ak.lst.fm/i/u/34s/12c0745510c0449789c3f1fa848b8546.png" src="./adapt-strap_files/12c0745510c0449789c3f1fa848b8546.png">
+    &nbsp;<strong class="ng-binding">50 Cent &amp; G-Unit</strong>
+</span>
+</span><!-- end ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --><!-- ngInclude: attrs.templateUrl --><span ng-if="attrs.templateUrl" ng-include="attrs.templateUrl" class="ng-scope"><span class="ng-scope">
+    <img ng-src="http://img2-ak.lst.fm/i/u/34s/4da0be01fde54c74937d9f614a1f18d5.png" src="./adapt-strap_files/4da0be01fde54c74937d9f614a1f18d5.png">
+    &nbsp;<strong class="ng-binding">50 Cent ft Justin Timberlake</strong>
+</span>
+</span><!-- end ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow text-center ng-hide" ng-show="localConfig.loadingData"><a role="menuitem" tabindex="-1" href=""><ad-loading-icon><i class="glyphicon glyphicon-refresh ad-spin ng-scope"></i></ad-loading-icon></a></li></ul></div></div></ad-infinite-dropdown>
+            <p>Selected Items:</p>
+            <span class="ng-binding">
+                []
+            </span>
+            <!-- ad_example_end -->
+            <h4 class="text-muted">Local Data Source Mode</h4>
+            <!-- ad_example_start -->
+            <!-- ========== Usage Local Data Source ========== -->
+            <ad-infinite-dropdown dropdown-name="artistListLocal" template="artistListTemplate" initial-label="Select an artist" selected-items="localSelectedArtists" single-selection-mode="false" max-height="200px" local-data-source="localArtistsData" class="ng-scope"><div class="ad-infinite-list-container"><div class="dropdown"><button type="button" class="dropdown-toggle btn btn-default" ng-class="attrs.btnClasses || &#39;btn btn-default&#39;" data-toggle="dropdown"><!-- ngIf: !attrs.labelDisplayProperty || !selectedItems.length --><span ng-if="!attrs.labelDisplayProperty || !selectedItems.length" class="ng-binding ng-scope">Select an artist</span><!-- end ngIf: !attrs.labelDisplayProperty || !selectedItems.length --> <!-- ngIf: attrs.labelDisplayProperty && selectedItems.length --> <span class="caret"></span></button><!-- ngIf: attrs.dropdownHeaderTemplateUrl --><ul class="dropdown-menu" role="menu" ng-class="{&#39;with-dropdown-header&#39;: attrs.dropdownHeaderTemplateUrl}" ng-style="localConfig.dimensions" style="max-height: 200px;"><!-- ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --><span ng-if="attrs.template" ad-compile-template="artistListTemplate" class="ng-scope"><em class="ng-binding ng-scope">50 Cent</em></span><!-- end ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --><span ng-if="attrs.template" ad-compile-template="artistListTemplate" class="ng-scope"><em class="ng-binding ng-scope">50 Cent Feat. Justin Timberlake</em></span><!-- end ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --><span ng-if="attrs.template" ad-compile-template="artistListTemplate" class="ng-scope"><em class="ng-binding ng-scope">Jeremih feat. 50 Cent</em></span><!-- end ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --><span ng-if="attrs.template" ad-compile-template="artistListTemplate" class="ng-scope"><em class="ng-binding ng-scope">50 Cent, Eminem, Ca$his &amp; Lloyd Banks</em></span><!-- end ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --><span ng-if="attrs.template" ad-compile-template="artistListTemplate" class="ng-scope"><em class="ng-binding ng-scope">Mann Feat. 50 Cent</em></span><!-- end ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --><span ng-if="attrs.template" ad-compile-template="artistListTemplate" class="ng-scope"><em class="ng-binding ng-scope">50 Cent feat. Mobb Deep</em></span><!-- end ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --><span ng-if="attrs.template" ad-compile-template="artistListTemplate" class="ng-scope"><em class="ng-binding ng-scope">50 Cent F. Justin Timberlake and Timbaland</em></span><!-- end ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --><span ng-if="attrs.template" ad-compile-template="artistListTemplate" class="ng-scope"><em class="ng-binding ng-scope">Mobb Deep Feat. 50 Cent &amp; Nate Dogg</em></span><!-- end ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --><span ng-if="attrs.template" ad-compile-template="artistListTemplate" class="ng-scope"><em class="ng-binding ng-scope">50 Cent feat. Justin Timberlake &amp; Timbaland</em></span><!-- end ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow ng-scope" data-ng-repeat="item in items.list" ng-class="{&#39;active&#39;: adStrapUtils.itemExistsInList(item, selectedItems)}" ng-click="addRemoveItem($event, item, selectedItems)"><a role="menuitem" tabindex="-1" href=""><!-- ngIf: attrs.displayProperty --> <!-- ngIf: attrs.template --><span ng-if="attrs.template" ad-compile-template="artistListTemplate" class="ng-scope"><em class="ng-binding ng-scope">50 Cent Feat. Young Buck</em></span><!-- end ngIf: attrs.template --> <!-- ngIf: attrs.templateUrl --></a></li><!-- end ngRepeat: item in items.list --><li class="text-overflow text-center ng-hide" ng-show="localConfig.loadingData"><a role="menuitem" tabindex="-1" href=""><ad-loading-icon><i class="glyphicon glyphicon-refresh ad-spin ng-scope"></i></ad-loading-icon></a></li></ul></div></div></ad-infinite-dropdown>
+            <p>Selected Items:</p>
+            <span class="ng-binding">
+                []
+            </span>
+            <!-- ad_example_end -->
+        </div>
+    </div>
+</div></ng-include>
+                </div>
+            </div>
+            <div>
+                <div>
+                  <span class="btn btn-link btn-lg" ng-click="module.showOptions = !module.showOptions">
+                    <i class="fa fa-plus" ng-hide="module.showOptions"></i>
+                    <i class="fa fa-minus ng-hide" ng-show="module.showOptions"></i>
+                    Options
+                  </span>
+                </div>
+                <!-- ngIf: module.showOptions -->
+            </div>
+            <div>
+              <div>
+                 <span class="btn btn-link btn-lg" ng-click="module.showMoreInfo = !module.showMoreInfo">
+                   <i class="fa fa-plus" ng-hide="module.showMoreInfo"></i>
+                   <i class="fa fa-minus ng-hide" ng-show="module.showMoreInfo"></i>
+                   More Info
+                 </span>
+              </div>
+              <!-- ngIf: module.showMoreInfo -->
+            </div>
+        </div>
+    </div><!-- end ngRepeat: module in modules --><div class="module-section ng-scope" ng-repeat="module in modules" id="loadingindicator">
+        <h3 class="ng-binding">Loading Indicator</h3>
+        <p class="text-muted ng-binding">- simple directives to render overlay and inline loading indicators</p>
+        <div ng-controller="treebrowserCtrl" class="ng-scope">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <h4 class="text-danger">Code</h4>
+                    <code-navigator files="module.docFiles" base-path="src/loadingindicator/docs/" class="ng-isolate-scope"><div class="code-navigator">
+    <div>
+        <ul class="nav nav-tabs" role="tablist">
+            <!-- ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope active">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">loadingindicator.view.html</a>
+            </li><!-- end ngRepeat: file in files --><li ng-class="{active: currentFile == file}" ng-repeat="file in files" class="ng-scope">
+                <a class="cursor-pointer ng-binding" ng-click="setCurrentFile(file)">loadingindicator.ctrl.js</a>
+            </li><!-- end ngRepeat: file in files -->
+        </ul>
+    </div>
+    <div>
+        <markdown src="src/loadingindicator/docs/loadingindicator.view.html"><pre><code class=" hljs xml">           <span class="hljs-comment">&lt;!-- ========== Usage (overlay) ========== --&gt;</span>
+           <span class="hljs-tag">&lt;<span class="hljs-title">ad-loading-overlay</span> <span class="hljs-attribute">z-index</span>=<span class="hljs-value">"2000"</span>
+                               <span class="hljs-attribute">position</span>=<span class="hljs-value">"absolute"</span>
+                               <span class="hljs-attribute">loading-icon-size</span>=<span class="hljs-value">"2em"</span>
+                               <span class="hljs-attribute">loading</span>=<span class="hljs-value">"showLoadingIcon"</span>
+                               <span class="hljs-attribute">loading-icon-class</span>=<span class="hljs-value">"glyphicon glyphicon-refresh ad-spin"</span>
+                               <span class="hljs-attribute">container-classes</span>=<span class="hljs-value">"xyz"</span>&gt;</span>
+           <span class="hljs-tag">&lt;/<span class="hljs-title">ad-loading-overlay</span>&gt;</span>
+
+            <span class="hljs-comment">&lt;!-- ========== Usage (Simple Icon) ========== --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">ad-loading-icon</span> <span class="hljs-attribute">ng-show</span>=<span class="hljs-value">"showSimpleIcon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">ad-loading-icon</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">ad-loading-icon</span> <span class="hljs-attribute">ng-show</span>=<span class="hljs-value">"showSimpleIcon"</span>
+                             <span class="hljs-attribute">loading-icon-size</span>=<span class="hljs-value">"26px"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">ad-loading-icon</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">br</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">ad-loading-icon</span> <span class="hljs-attribute">ng-show</span>=<span class="hljs-value">"showSimpleIcon"</span>
+                             <span class="hljs-attribute">loading-icon-class</span>=<span class="hljs-value">"glyphicon glyphicon-plus ad-spin"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">ad-loading-icon</span>&gt;</span>
+</code></pre></markdown>
+    </div>
+</div></code-navigator>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <h4 class="text-primary">
+                      Demo
+                      <!-- ngIf: module.playGroundUrl --><a class="btn btn-link btn-sm ng-scope" target="_blank" ng-if="module.playGroundUrl" ng-href="http://jsfiddle.net/kashjs/n79ydkjh/" href="http://jsfiddle.net/kashjs/n79ydkjh/">
+                        <i class="glyphicon glyphicon-edit"></i> jsFiddle
+                      </a><!-- end ngIf: module.playGroundUrl -->
+                    </h4>
+                    <!-- ngInclude: undefined --><ng-include src="&#39;src/&#39; + module.moduleName + &#39;/docs/&#39; + module.moduleName + &#39;.view.html&#39;" class="ng-scope"><div ng-controller="loadingIndicatorCtrl" class="ng-scope">
+   <div class="panel panel-default">
+       <div class="panel-heading">
+           <h3 class="panel-title">
+               This is the demo for ad-loading-overlay
+               <button class="btn btn-default" ng-click="showLoadingIcon = true">Show</button>
+               <button class="btn btn-default" ng-click="showLoadingIcon = false">Hide</button>
+           </h3>
+       </div>
+       <div class="panel-body" style="position:relative;">
+           <h1>Some Content <br> Imagine this is the body of your page</h1>
+
+           <!-- ad_example_start -->
+           <!-- ========== Usage (overlay) ========== -->
+           <ad-loading-overlay z-index="2000" position="absolute" loading-icon-size="2em" loading="showLoadingIcon" loading-icon-class="glyphicon glyphicon-refresh ad-spin" container-classes="xyz" class="ng-isolate-scope"><div class="ad-loading-overlay-container xyz ng-hide" ng-class="containerClasses" ng-style="{&#39;z-index&#39;: zIndex || &#39;1000&#39;,&#39;position&#39;: position || &#39;absolute&#39;}" ng-show="loading" style="z-index: 2000; position: absolute;"><div class="wrapper"><div class="loading-indicator"><ad-loading-icon loading-icon-size="2em" loading-icon-class="glyphicon glyphicon-refresh ad-spin"><i class="glyphicon glyphicon-refresh ad-spin ng-scope" ng-style="{&#39;font-size&#39;: &#39;2em&#39;}" style="font-size: 2em;"></i></ad-loading-icon></div></div></div></ad-loading-overlay>
+          <!-- ad_example_end -->
+
+       </div>
+   </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                Simple icon tag
+                <button class="btn btn-default" ng-click="showSimpleIcon = true">Show</button>
+                <button class="btn btn-default" ng-click="showSimpleIcon = false">Hide</button>
+            </h3>
+        </div>
+        <div class="panel-body">
+
+            <!-- ad_example_start -->
+            <!-- ========== Usage (Simple Icon) ========== -->
+            <ad-loading-icon ng-show="showSimpleIcon"><i class="glyphicon glyphicon-refresh ad-spin ng-scope"></i></ad-loading-icon><br>
+            <ad-loading-icon ng-show="showSimpleIcon" loading-icon-size="26px"><i class="glyphicon glyphicon-refresh ad-spin ng-scope" ng-style="{&#39;font-size&#39;: &#39;26px&#39;}" style="font-size: 26px;"></i></ad-loading-icon><br>
+            <ad-loading-icon ng-show="showSimpleIcon" loading-icon-class="glyphicon glyphicon-plus ad-spin"><i class="glyphicon glyphicon-plus ad-spin ng-scope"></i></ad-loading-icon>
+            <!-- ad_example_end -->
+
+        </div>
+    </div>
+</div></ng-include>
+                </div>
+            </div>
+            <div>
+                <div>
+                  <span class="btn btn-link btn-lg" ng-click="module.showOptions = !module.showOptions">
+                    <i class="fa fa-plus" ng-hide="module.showOptions"></i>
+                    <i class="fa fa-minus ng-hide" ng-show="module.showOptions"></i>
+                    Options
+                  </span>
+                </div>
+                <!-- ngIf: module.showOptions -->
+            </div>
+            <div>
+              <div>
+                 <span class="btn btn-link btn-lg" ng-click="module.showMoreInfo = !module.showMoreInfo">
+                   <i class="fa fa-plus" ng-hide="module.showMoreInfo"></i>
+                   <i class="fa fa-minus ng-hide" ng-show="module.showMoreInfo"></i>
+                   More Info
+                 </span>
+              </div>
+              <!-- ngIf: module.showMoreInfo -->
+            </div>
+        </div>
+    </div><!-- end ngRepeat: module in modules -->
+</div></ng-include>
+
+    <!-- ===== Vendor Scripts ===== -->
+    <script src="./adapt-strap_files/jquery.min.js"></script>
+    <script src="./adapt-strap_files/angular.min.js"></script>
+    <script src="./adapt-strap_files/angular-sanitize.js"></script>
+    <script src="./adapt-strap_files/showdown.min.js"></script>
+    <script src="./adapt-strap_files/bootstrap.min.js"></script>
+    <script src="./adapt-strap_files/highlight.min.js"></script>
+    <script src="./adapt-strap_files/adapt-strap.js"></script>
+    <script src="./adapt-strap_files/adapt-strap.tpl.js"></script>
+
+    <!-- ===== Local Scripts ===== -->
+    <script src="./adapt-strap_files/app.js"></script>
+    <script src="./adapt-strap_files/modulesDefinitions.js"></script>
+    <script src="./adapt-strap_files/treebrowser.ctrl.js"></script>
+    <script src="./adapt-strap_files/tablelite.ctrl.js"></script>
+    <script src="./adapt-strap_files/tableajax.ctrl.js"></script>
+    <script src="./adapt-strap_files/loadingindicator.ctrl.js"></script>
+    <script src="./adapt-strap_files/draggable.ctrl.js"></script>
+    <script src="./adapt-strap_files/infinitedropdown.ctrl.js"></script>
+    <script src="./adapt-strap_files/alerts.ctrl.js"></script>
+
+</body></html>
